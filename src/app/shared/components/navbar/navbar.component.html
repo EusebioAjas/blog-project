@@ -1,0 +1,23 @@
+<div container-fluid>
+    <nav class="navbar justify-content-between navbar-light">
+        <div class="form-inline">
+            <a class="navbar-brand mx-5 py-0" href="#">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"
+                    width="50"
+                    height="50" alt="">
+            </a>
+
+            <li class="d-flex align-items-start">
+                <a appNavbar class="home mr-4 ml-5" href="#">HOME</a>
+                <a appNavbar class="categorias mr-4" href="#">CATEGORIAS</a>
+                <a appNavbar class="noticias mr-4" href="#">NOTICIAS</a>
+            </li>
+        </div>
+
+        <div class="form-inline my-lg-0 d-flex justify-content-end">
+            <button appNavbar type="button" [isButton]="true" class="btn btn-light px-5 mr-5 buttonLogin" href="#">Login</button>
+        </div>
+    </nav>
+</div>
+
