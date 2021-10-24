@@ -6,14 +6,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { YtbVideoFrameComponent } from './components';
 import { MovieCardComponent, NavbarComponent } from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    YtbVideoFrameComponent,
     NavbarComponent,
     NavbarDirective,
     MovieCardDirective,
