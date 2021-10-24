@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SearchVideo } from 'src/app/models';
 import { YouTubeVideoService } from 'src/app/services';
-import { YTB_VIDEO_BASE_URL } from 'src/app/shared/apis';
+import { YOUTUBE_BASE_URL } from 'src/app/config';
 
 @Component({
   selector: 'app-ytb-video-frame',
   templateUrl: './ytb-video-frame.component.html',
-  styleUrls: ['./ytb-video-frame.component.css']
 })
 export class YtbVideoFrameComponent implements OnInit {
   searchResult!: SearchVideo;
@@ -28,6 +27,6 @@ export class YtbVideoFrameComponent implements OnInit {
   }
 
   getVideo(videoId: string) {
-    return this._sanitizer.bypassSecurityTrustResourceUrl(YTB_VIDEO_BASE_URL + videoId);
+    return this._sanitizer.bypassSecurityTrustResourceUrl(YOUTUBE_BASE_URL + videoId);
   }
 }

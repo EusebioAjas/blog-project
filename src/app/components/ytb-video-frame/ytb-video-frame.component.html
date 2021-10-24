@@ -6,7 +6,6 @@
   </div>
   <div *ngIf="searchResult; else elseBlock">
     <div *ngFor="let video of searchResult.items">
-      <p>{{video.id.videoId}}</p>
       <iframe id="player" type="text/html" width="320" height="200"
         [src]="getVideo(video.id.videoId)"
         frameborder="0"
