@@ -2,9 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
-};
+import { getEnv } from "@elemental-concept/env-bakery";
+
+export const environment = () => (
+  {
+    production: getEnv('PRODUCTION').boolean(),
+    youtube_apikey: getEnv('YOUTUBE_API_KEY').string(),
+  }
+);
 
 /*
  * For easier debugging in development mode, you can import the following file
