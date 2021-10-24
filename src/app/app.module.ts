@@ -4,17 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { YouTubeVideoService } from './services';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { YtbVideoFrameComponent } from './components';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    YtbVideoFrameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [YouTubeVideoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
