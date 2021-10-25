@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { YouTubeVideoService } from './services';
+import { YtbVideoFrameComponent } from './components';
 import { MovieCardComponent, NavbarComponent } from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
-
 
 @NgModule({
   declarations: [
@@ -16,20 +17,22 @@ import { MovieCardDirective, NavbarDirective } from './shared/directives';
     NavbarComponent,
     NavbarDirective,
     MovieCardDirective,
-    MovieCardComponent
+    MovieCardComponent,
+    YtbVideoFrameComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     NavbarComponent,
     NavbarDirective,
     MovieCardDirective,
     MovieCardComponent,
+    YouTubeVideoService,
   ],
   bootstrap: [AppComponent]
 })
