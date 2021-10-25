@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap');
+
+.navbar {
+    background-color: #07111B;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.home {
+    font-family: 'Mulish', sans-serif;
+}
+
+.buttonLogin {
+    border-radius: 25px;
+    background-color: transparent;
+}
