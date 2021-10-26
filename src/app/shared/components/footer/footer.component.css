@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap');
+
+.footer {
+    background-color: #07111B;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+}
+
+.networks {
+    position: relative;
+    left: 5%;
+}
+
+
+.img-logo {
+    position: relative;
+    right: -30%;
+}
