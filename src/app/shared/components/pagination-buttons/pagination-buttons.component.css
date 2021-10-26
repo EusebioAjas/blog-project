@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@900&display=swap');
+
+
+.btn {
+    border-radius: 100%;
+    font-family: 'Mulish', sans-serif;
+}
+
+.btn.back {
+    background-color: #2D2A2A;
+    border-color: #2D2A2A;
+}
+
+.btn.next {
+    background-color: #FC1342;
+    border-color: #FC1342;
+}
