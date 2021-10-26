@@ -8,6 +8,7 @@ export const environment = () => (
   {
     production: getEnv('PRODUCTION').boolean(),
     youtube_apikey: getEnv('YOUTUBE_API_KEY').string(),
+    tmdb_apikey: getEnv('TMDB_API_KEY').string()
   }
 );
 
