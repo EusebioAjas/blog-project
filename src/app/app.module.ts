@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { YouTubeVideoService } from './services';
 import { YtbVideoFrameComponent } from './components';
-import { MovieCardComponent, NavbarComponent } from './shared/components';
+import { MovieCardComponent, NavbarComponent, NgbdRatingBasic } from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
 
 @NgModule({
@@ -19,6 +19,7 @@ import { MovieCardDirective, NavbarDirective } from './shared/directives';
     MovieCardDirective,
     MovieCardComponent,
     YtbVideoFrameComponent,
+    NgbdRatingBasic,
   ],
   imports: [
     BrowserModule,
