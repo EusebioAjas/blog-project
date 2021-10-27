@@ -2,39 +2,30 @@
 
 
 .btn {
+    border: none;
     border-radius: 50%;
+    height: 35px;
+    width: 35px;
 }
 
 .btn-facebook {
     background: url('../../../../assets/footer/img-facebook.png') center;
     background-size: 100% 100%;
-    border: none;
-    height: 35px;
-    width: 35px;
 }
 
 .btn-twitter {
     background: url('../../../../assets/footer/img-twitter.png') center;
     background-size: 100% 100%;
-    border: none;
-    height: 35px;
-    width: 35px;
 }
 
 .btn-youtube {
     background: url('../../../../assets/footer/img-youtube.png') center;
     background-size: 100% 100%;
-    border: none;
-    height: 35px;
-    width: 35px;
 }
 
 .btn-instagram {
     background: url('../../../../assets/footer/img-instagram.png') center;
     background-size: 100% 100%;
-    border: none;
-    height: 35px;
-    width: 35px;
 }
 
 .container {
