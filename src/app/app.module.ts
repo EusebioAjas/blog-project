@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { YouTubeVideoService } from './services';
 import { YtbVideoFrameComponent } from './components';
-import { MovieCardComponent, NavbarComponent, NgbdRatingBasic, PaginationButtonsComponent } from './shared/components';
+import { FooterComponent, MovieCardComponent, NavbarComponent, NgbdRatingBasic, PaginationButtonsComponent } from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
 import { TMDBDataService } from './services/tmdb-data.service';
 import { PopularMoviewsComponent } from './components/popular-movies/popular-movies.component';
@@ -22,6 +22,7 @@ import { PopularMoviewsComponent } from './components/popular-movies/popular-mov
     MovieCardComponent,
     YtbVideoFrameComponent,
     NgbdRatingBasic,
+    FooterComponent,
     PaginationButtonsComponent,
     PopularMoviewsComponent,
   ],
@@ -33,6 +34,7 @@ import { PopularMoviewsComponent } from './components/popular-movies/popular-mov
     HttpClientModule,
   ],
   providers: [
+    FooterComponent,
     NavbarComponent,
     PaginationButtonsComponent,
     NavbarDirective,
