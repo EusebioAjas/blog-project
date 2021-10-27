@@ -1,12 +1,7 @@
+import { Movie } from './movie';
 export interface PopularMovies {
-  "results": Array<{
-    "id": number,
-    "genre_ids": Array<{ "id": number }>,
-    "relase_date": String,
-    "title": String,
-    "overview": String,
-    "vote_average": number,
-    "poster_path": string,
-    "backdrop_path": string
-  }>
+  page: number;
+  results: Movie[];
+  total_results: number;
+  total_pages: number;
 }

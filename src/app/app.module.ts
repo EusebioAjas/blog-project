@@ -10,6 +10,8 @@ import { YouTubeVideoService } from './services';
 import { YtbVideoFrameComponent } from './components';
 import { MovieCardComponent, NavbarComponent, NgbdRatingBasic, PaginationButtonsComponent } from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
+import { TMDBDataService } from './services/tmdb-data.service';
+import { PopularMoviewsComponent } from './components/popular-movies/popular-movies.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { MovieCardDirective, NavbarDirective } from './shared/directives';
     YtbVideoFrameComponent,
     NgbdRatingBasic,
     PaginationButtonsComponent,
+    PopularMoviewsComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { MovieCardDirective, NavbarDirective } from './shared/directives';
     MovieCardDirective,
     MovieCardComponent,
     YouTubeVideoService,
+    TMDBDataService,
   ],
   bootstrap: [AppComponent]
 })
