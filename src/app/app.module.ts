@@ -12,7 +12,7 @@ import { FooterComponent, MovieCardComponent, NavbarComponent, NgbdRatingBasic, 
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
 import { TMDBDataService } from './services/tmdb-data.service';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -36,12 +36,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     HttpClientModule,
   ],
   providers: [
-    FooterComponent,
-    NavbarComponent,
-    PaginationButtonsComponent,
     NavbarDirective,
     MovieCardDirective,
-    MovieCardComponent,
     YouTubeVideoService,
     TMDBDataService,
   ],

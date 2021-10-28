@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { TMDBDataService } from 'src/app/services/tmdb-data.service';
 
@@ -9,7 +9,6 @@ import { TMDBDataService } from 'src/app/services/tmdb-data.service';
 })
 export class PopularMoviesComponent implements OnInit {
   movies!: Movie[];
-  selectedMovie?: Movie;
 
   constructor(private tmdbService: TMDBDataService) {}
 
@@ -25,9 +24,5 @@ export class PopularMoviesComponent implements OnInit {
 
   parseRating(rate: number) {
     return (Math.floor(rate) * 5) / 10;
-  }
-
-  onSelect(movie: Movie): void {
-    this.selectedMovie = movie;
   }
 }

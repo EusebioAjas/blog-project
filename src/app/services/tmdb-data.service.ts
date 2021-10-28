@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TMDB_API_URL } from "../config";
-import { MovieDetails } from "../models/movie-details";
 import { MovieReviews } from "../models/movie-reviews";
 import { environment } from "src/environments/environment";
 import { Observable } from 'rxjs';
