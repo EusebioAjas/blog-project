@@ -11,7 +11,8 @@ import { YtbVideoFrameComponent } from './components';
 import { FooterComponent, MovieCardComponent, NavbarComponent, NgbdRatingBasic, PaginationButtonsComponent } from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
 import { TMDBDataService } from './services/tmdb-data.service';
-import { PopularMoviewsComponent } from './components/popular-movies/popular-movies.component';
+import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PopularMoviewsComponent } from './components/popular-movies/popular-mov
     NgbdRatingBasic,
     FooterComponent,
     PaginationButtonsComponent,
-    PopularMoviewsComponent,
+    PopularMoviesComponent,
+    MovieDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,12 +36,8 @@ import { PopularMoviewsComponent } from './components/popular-movies/popular-mov
     HttpClientModule,
   ],
   providers: [
-    FooterComponent,
-    NavbarComponent,
-    PaginationButtonsComponent,
     NavbarDirective,
     MovieCardDirective,
-    MovieCardComponent,
     YouTubeVideoService,
     TMDBDataService,
   ],

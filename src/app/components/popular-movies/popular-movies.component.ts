@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { TMDBDataService } from 'src/app/services/tmdb-data.service';
 
@@ -7,8 +7,9 @@ import { TMDBDataService } from 'src/app/services/tmdb-data.service';
   templateUrl: './popular-movies.component.html',
   styleUrls: ['./popular-movies.component.css'],
 })
-export class PopularMoviewsComponent implements OnInit {
+export class PopularMoviesComponent implements OnInit {
   movies!: Movie[];
+
   constructor(private tmdbService: TMDBDataService) {}
 
   ngOnInit(): void {
@@ -18,6 +19,10 @@ export class PopularMoviewsComponent implements OnInit {
   getPopularMovies(): void {
     this.tmdbService
       .getPopular()
-      .subscribe((movies) => (this.movies = movies.results));
+      .subscribe((movies) => (this.movies = movies.results.slice(0, 4)));
+  }
+
+  parseRating(rate: number) {
+    return (Math.floor(rate) * 5) / 10;
   }
 }
