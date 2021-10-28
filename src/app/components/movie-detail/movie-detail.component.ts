@@ -1,8 +1,8 @@
 import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Movie } from '../models/movie';
-import { TMDBDataService } from '../services/tmdb-data.service';
+import { Movie } from '../../models/movie';
+import { TMDBDataService } from '../../services/tmdb-data.service';
 
 @Component({
   selector: 'app-movie-detail',

@@ -1,7 +1,7 @@
 <p>movie-detail works!</p>
 <div *ngIf="movie">
   <h2>{{ movie.title | uppercase }} Details</h2>
-  <h3>{{ movie.runtime*1000 | date: 'mm:ss'}} min</h3>
+  <h3>{{ movie.runtime * 1000 | date: "mm:ss" }} min</h3>
   <div>
     <p>{{ movie.overview }}</p>
   </div>
