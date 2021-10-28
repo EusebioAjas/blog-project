@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SearchVideo } from 'src/app/models';
 import { YouTubeVideoService } from 'src/app/services';
@@ -10,9 +10,11 @@ import { YOUTUBE_BASE_URL } from 'src/app/config';
 })
 export class YtbVideoFrameComponent implements OnInit {
   searchResult!: SearchVideo;
-  queryYtb!: string;
+  @Input() queryYtb!: string;
 
-  constructor(private ytbService: YouTubeVideoService, private _sanitizer: DomSanitizer) { }
+  constructor(private ytbService: YouTubeVideoService, private _sanitizer: DomSanitizer) { 
+    this.busqueda();
+  }
 
   ngOnInit(): void {
   }
@@ -23,7 +25,7 @@ export class YtbVideoFrameComponent implements OnInit {
         this.searchResult = response;
       }, (error) => {
         alert("error: " + error.statusText)
-      })
+      });
   }
 
   getVideo(videoId: string) {
