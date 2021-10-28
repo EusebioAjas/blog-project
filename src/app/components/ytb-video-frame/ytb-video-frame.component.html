@@ -1,11 +1,6 @@
 <div>
-  <!-- <p>ytb-video-frame works!</p>
-  <div>
-    <input name="query" placeholder="type the name of video..." [(ngModel)]="queryYtb"/>
-    <button type="button" (click)="busqueda()">Search</button>
-  </div>-->
-  <div *ngIf="searchResult; else elseBlock">
-    <div *ngFor="let video of searchResult.items">
+  <div *ngIf="videos; else elseBlock">
+    <div *ngFor="let video of videos">
       <iframe id="player" type="text/html" width="320" height="200"
         [src]="getVideo(video.id.videoId)"
         frameborder="0"
