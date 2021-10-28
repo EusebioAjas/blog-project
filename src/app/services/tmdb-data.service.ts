@@ -6,6 +6,7 @@ import { MovieReviews } from "../models/movie-reviews";
 import { environment } from "src/environments/environment";
 import { Observable } from 'rxjs';
 import { PopularMovies } from '../models/popular-movies';
+import { Movie } from '../models/movie';
 
 
 @Injectable({
@@ -20,12 +21,11 @@ export class TMDBDataService {
     return this.http.get<PopularMovies>(this.moviesUrl);
   }
 
-  getDetails(id: number){
-    return this.http.get<MovieDetails>(`${TMDB_API_URL}movie/${id}?api_key=${environment().tmdb_apikey}&language=en-US`).toPromise();
+  getMovie(id: number): Observable<Movie>{
+    return this.http.get<Movie>(`${TMDB_API_URL}movie/${id}?api_key=${environment().tmdb_apikey}&language=en-US`);
   }
 
   getReviews(id: number){
     return this.http.get<MovieReviews>(`${TMDB_API_URL}movie/${id}/reviews?api_key=${environment().tmdb_apikey}`).toPromise();
   }
-
 }
