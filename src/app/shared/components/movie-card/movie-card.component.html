@@ -1,15 +1,17 @@
 <div class="card card-section" href="#">
-    <img src="https://www.ecartelera.com/carteles/8900/8902/041_m.jpg"
+    <img [src]="getFullImgPath(movie.poster_path)"
         class="card-img" alt="...">
     <div class="card-img-overlay">
         <div class="into">
-            <p class="card-text text-white">Avengers EndGame</p>
+            <p class="cardtext"><span>{{ movie.title }}</span></p>
+        </div>
+        <div>
             <div class="container1">
                 <div class="stars-container">
-                  <ngbd-rating-basic [currentRate]="3"></ngbd-rating-basic>
+                    <ngbd-rating-basic [currentRate]="parseRating(movie.vote_average)" ></ngbd-rating-basic>
                 </div>
             </div>
-            <p class="release_day text-white">12/08/2021</p>
+            <p class="release_day text-white">{{ movie.release_date }}</p>
         </div>
     </div>
 </div>
