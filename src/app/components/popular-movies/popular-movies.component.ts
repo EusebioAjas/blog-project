@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BASE_IMG_URL } from 'src/app/config/tmdb';
 import { Movie } from 'src/app/models/movie';
 import { TMDBDataService } from 'src/app/services/tmdb-data.service';
 
@@ -20,13 +19,5 @@ export class PopularMoviewsComponent implements OnInit {
     this.tmdbService
       .getPopular()
       .subscribe((movies) => (this.movies = movies.results));
-  }
-
-  getFullImgPath(posterPath: string) {
-    return BASE_IMG_URL + posterPath.trim();
-  }
-
-  parseRating(rate: number) {
-    return (Math.floor(rate) * 5) / 10;
   }
 }

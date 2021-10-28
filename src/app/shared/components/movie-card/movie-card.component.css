@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600;700&display=swap');
 
 .card {
-    height: 254px;
+    height: 270px;
     width: 180px;
 }
 
 .container1 {
-    bottom: -0.1em;
+    bottom: -10em;
     margin: 1em;
     position: relative;
+    text-align: center;
 }
 
 .card-img-overlay {
@@ -19,17 +20,19 @@
 }
 
 .into {
-    bottom: -5em;
-    position: relative;
-    text-align: center;
+    margin: auto;
 }
 
-.card-text {
-    bottom: -1em;
+.cardtext {
+    bottom: 3em;
+    color: white;
     font-family: 'Mulish', sans-serif;
     font-size: 18px;
     font-weight: bold;
-    position: relative;
+    left: 1em;
+    right: 1em;
+    position: absolute;
+    text-align: center;
 }
 
 .stars-container {
@@ -45,11 +48,14 @@
 }
 
 .release_day {
+    position: relative;
+    bottom: -14.5em;
     border: 1px solid #ffffff;
     border-radius: 25px;
     font-family: 'Mulish', sans-serif;
     font-size: 10px;
     margin: 10px 20% 0% 20%;
+    text-align: center;
 }
 
 .card-section:hover {
