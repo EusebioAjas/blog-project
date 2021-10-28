@@ -7,8 +7,10 @@ import { TMDBDataService } from 'src/app/services/tmdb-data.service';
   templateUrl: './popular-movies.component.html',
   styleUrls: ['./popular-movies.component.css'],
 })
-export class PopularMoviewsComponent implements OnInit {
+export class PopularMoviesComponent implements OnInit {
   movies!: Movie[];
+  selectedMovie?: Movie;
+
   constructor(private tmdbService: TMDBDataService) {}
 
   ngOnInit(): void {
@@ -18,6 +20,14 @@ export class PopularMoviewsComponent implements OnInit {
   getPopularMovies(): void {
     this.tmdbService
       .getPopular()
-      .subscribe((movies) => (this.movies = movies.results));
+      .subscribe((movies) => (this.movies = movies.results.slice(0, 4)));
+  }
+
+  parseRating(rate: number) {
+    return (Math.floor(rate) * 5) / 10;
+  }
+
+  onSelect(movie: Movie): void {
+    this.selectedMovie = movie;
   }
 }
