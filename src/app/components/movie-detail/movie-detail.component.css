@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+.background {
+    background: url('../../../assets/movie-detail/img-cinema.png');
+    height: 41.7vmax;
+    opacity: 0.9;
+    overflow: hidden;
+}
+
+.img-background {
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+    width: 100%;
+}
+
+.container2 {
+    background-color: #0B141F;
+    border-radius: 2%;
+    font-family: 'Mulish', sans-serif;
+    margin: 0% 31% 0% 29%;
+    opacity: 0.7;
+    padding: 3%;
+    position: absolute;
+    text-align: justify;
+    top: 5em;
+}
+
+.principal {
+    text-align: center;
+}
+
+.trailer {
+    left: 70%;
+    position: absolute;
+    top: 30%;
+}

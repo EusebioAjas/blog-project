@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BASE_IMG_URL } from 'src/app/config/tmdb';
 import { Movie } from '../../models/movie';
 import { TMDBDataService } from '../../services/tmdb-data.service';
 
@@ -29,5 +30,9 @@ export class MovieDetailComponent implements OnInit {
 
   goBack(): void{
     this.location.back();
+  }
+
+  getFullImgPath(posterPath: string) {
+    return BASE_IMG_URL + posterPath.trim();
   }
 }
