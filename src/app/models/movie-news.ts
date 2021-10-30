@@ -9,7 +9,9 @@ export interface MovieNews {
             "section_name":string,
             "multimedia":Array<{
                 "type":string,
-                "url":string
+                "url":string,
+                "width":number,
+                "height":number
             }>,
             "headline":{
                 "main":string,

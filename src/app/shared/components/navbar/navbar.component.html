@@ -11,13 +11,41 @@
             <li class="d-flex align-items-start">
                 <a routerLink="/" appNavbar class="home mr-4 ml-5" href="#">HOME</a>
                 <a appNavbar class="categorias mr-4" href="#">CATEGORIAS</a>
-                <a appNavbar class="noticias mr-4" href="#">NOTICIAS</a>
+                <a routerLink="noticias"appNavbar class="noticias mr-4" href="#">NOTICIAS</a>
             </li>
         </div>
 
         <div class="form-inline my-lg-0 d-flex justify-content-end">
-            <button appNavbar type="button" [isButton]="true" class="btn btn-light px-5 mr-5 buttonLogin" href="#">Login</button>
+            <button appNavbar type="button" [isButton]="true" class="btn btn-light px-5 mr-5 buttonLogin" href="#" (click)="loginModal(contenido)">Login</button>
         </div>
     </nav>
 </div>
+
+<ng-template #contenido let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">Inicio de Sesion</h4>
+        <button class="close" type="button" (click)="modal.dismiss()">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="formularioDeIngreso" >
+            Usuario: <input 
+            type="text"
+            class="form-control" 
+            formControlName="username"
+            [class.is-invalid]="formularioDeIngreso.get('username')?.touched && formularioDeIngreso.get('username')?.invalid">
+            Contraseña: <input 
+            type="password" 
+            class="form-control" 
+            formControlName="userpassword"
+            [class.is-invalid]="formularioDeIngreso.get('userpassword')?.touched && formularioDeIngreso.get('userpassword')?.invalid">
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="modal.close()">
+            Registrate
+        </button>
+    </div>
+</ng-template>
 

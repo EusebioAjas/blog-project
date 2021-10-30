@@ -14,3 +14,8 @@
     border-radius: 25px;
     background-color: transparent;
 }
+
+.modal-login .modal-content{
+    background-color: #2D2A2A;
+    color: #ffffff;
+}

@@ -13,6 +13,8 @@ import { MovieCardDirective, NavbarDirective } from './shared/directives';
 import { TMDBDataService } from './services/tmdb-data.service';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { NewsletterComponent } from './components/newsletter/newsletter.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     PaginationButtonsComponent,
     PopularMoviesComponent,
     MovieDetailComponent,
+    NewsletterComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     NgbModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     NavbarDirective,
