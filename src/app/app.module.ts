@@ -15,6 +15,9 @@ import { PopularMoviesComponent } from './components/popular-movies/popular-movi
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppendBaseImgUrlPipe } from './shared/pipes/append-base-img-url.pipe';
+import { DateRuntimePipe } from './shared/pipes/date-runtime.pipe';
+import { RatingPipe } from './shared/pipes/rating.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     PopularMoviesComponent,
     MovieDetailComponent,
     NewsletterComponent,
+    AppendBaseImgUrlPipe,
+    DateRuntimePipe,
+    RatingPipe,
   ],
   imports: [
     BrowserModule,

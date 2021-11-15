@@ -5,22 +5,12 @@ import { Movie } from 'src/app/models/movie';
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',
-  styleUrls: ['./movie-card.component.css']
+  styleUrls: ['./movie-card.component.css'],
 })
 export class MovieCardComponent implements OnInit {
-
   @Input() movie!: Movie;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
-  getFullImgPath(posterPath: string) {
-    return BASE_IMG_URL + posterPath.trim();
-  }
-
-  parseRating(rate: number) {
-    return (Math.floor(rate) * 5) / 10;
-  }
+  ngOnInit(): void {}
 }
