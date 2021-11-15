@@ -1,13 +1,15 @@
 <div>
-  <div *ngIf="videos; else elseBlock">
-    <div *ngFor="let video of videos">
-      <iframe id="player" type="text/html" width="405" height="227"
-        [src]="getVideo(video.id.videoId)"
+  <div *ngIf="safeURL; else elseBlock">
+      <iframe
+        id="player"
+        type="text/html"
+        width="405"
+        height="227"
+        [src]="safeURL"
         frameborder="0"
         allowfullscreen
-        >
+      >
       </iframe>
-    </div>
   </div>
 </div>
 
