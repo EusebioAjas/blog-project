@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { SearchVideo } from '../models';
 import { environment } from 'src/environments/environment';
 import { YOUTUBE_API_URL } from '../config';
-import { Observable } from 'rxjs';
+import { DEFAULT_TERM } from '../config/youtube';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +13,8 @@ export class YouTubeVideoService {
 
   constructor(private http: HttpClient) {}
 
-  searchYouTubeVideo(query: string): Observable<SearchVideo> {
-    return this.http.get<SearchVideo>(this.url + query);
+  searchYouTubeVideo(query: string){
+    const fullTerm = query + DEFAULT_TERM;
+    return this.http.get<SearchVideo>(this.url + fullTerm).toPromise();
   }
 }
