@@ -17,12 +17,11 @@ export class PopularMoviesComponent implements OnInit {
   }
 
   getPopularMovies(): void {
-    this.tmdbService
-      .getPopular()
-      .subscribe((movies) => (this.movies = movies.results.slice(0, 4)));
-  }
-
-  parseRating(rate: number) {
-    return (Math.floor(rate) * 5) / 10;
+    this.tmdbService.getPopular().then(
+      (response) => (this.movies = response.results),
+      (error) => {
+        alert('Error:' + error.statusText);
+      }
+    );
   }
 }
