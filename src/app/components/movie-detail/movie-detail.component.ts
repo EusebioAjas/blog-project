@@ -1,7 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { BASE_IMG_URL } from 'src/app/config/tmdb';
 import { Movie } from '../../models/movie';
 import { TMDBDataService } from '../../services/tmdb-data.service';
 
@@ -15,24 +14,25 @@ export class MovieDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private movieService: TMDBDataService,
-    private location: Location,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
     this.getMovie();
   }
 
-  getMovie() : void {
+  getMovie(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.movieService.getMovie(id)
-    .subscribe(movie => this.movie = movie);
+    this.movieService.getMovie(id).then(
+      (response) => (this.movie = response),
+      (error) => {
+        alert('Error: ' + error.statusText);
+      }
+    );
   }
 
-  goBack(): void{
+  goBack(): void {
     this.location.back();
   }
 
-  getFullImgPath(posterPath: string) {
-    return BASE_IMG_URL + posterPath.trim();
-  }
 }

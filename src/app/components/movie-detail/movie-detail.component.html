@@ -3,10 +3,16 @@
     <div class="trailer">
       <app-ytb-video-frame [queryYtb]="movie.title"></app-ytb-video-frame>
     </div>
-    <img [src]="getFullImgPath(movie.poster_path)" class="img-background" alt="..." />
+    <img
+      [src]="movie.poster_path | appendBaseImgUrl"
+      class="img-background"
+      alt="..."
+    />
     <div class="container2 text-white">
-      <h2 class="principal"><b>{{ movie.title | uppercase }} Details</b></h2>
-      <h3 class="principal">{{ movie.runtime * 1000 | date: "mm:ss" }} min</h3>
+      <h2 class="principal">
+        <b>{{ movie.title | uppercase }} Details</b>
+      </h2>
+      <h3 class="principal">{{ movie.runtime | dateRuntime }}</h3>
       <div>
         <p>{{ movie.overview }}</p>
       </div>
@@ -14,4 +20,3 @@
     <button (click)="goBack()">go back</button>
   </div>
 </div>
-
