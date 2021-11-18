@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubeVideoService } from 'src/app/services';
 import { YOUTUBE_BASE_URL } from 'src/app/config';
 import { Video } from 'src/app/models/video';
+import { DEFAULT_TERM } from 'src/app/config/youtube';
 
 @Component({
   selector: 'app-ytb-video-frame',
@@ -11,6 +12,7 @@ import { Video } from 'src/app/models/video';
 export class YtbVideoFrameComponent implements OnInit {
   videos!: Video[];
   @Input() queryYtb!: string;
+  safeURL!: SafeResourceUrl;
 
   constructor(
     private ytbService: YouTubeVideoService,
@@ -22,13 +24,17 @@ export class YtbVideoFrameComponent implements OnInit {
   }
 
   searchVideos() {
-    this.ytbService
-      .searchYouTubeVideo(this.queryYtb)
-      .subscribe((videos) => (this.videos = videos.items));
+    this.ytbService.searchYouTubeVideo(this.queryYtb).then(
+      (response) =>
+        response.items.map((video) => this.getVideo(video.id.videoId)),
+      (error) => {
+        alert(error.statusText);
+      }
+    );
   }
 
   getVideo(videoId: string) {
-    return this._sanitizer.bypassSecurityTrustResourceUrl(
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(
       YOUTUBE_BASE_URL + videoId
     );
   }

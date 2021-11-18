@@ -16,12 +16,12 @@ export class TMDBDataService {
 
   constructor(private http:HttpClient) { }
 
-  getPopular(): Observable<PopularMovies>{
-    return this.http.get<PopularMovies>(this.moviesUrl);
+  getPopular(){
+    return this.http.get<PopularMovies>(this.moviesUrl).toPromise();
   }
 
-  getMovie(id: number): Observable<Movie>{
-    return this.http.get<Movie>(`${TMDB_API_URL}movie/${id}?api_key=${environment().tmdb_apikey}&language=en-US`);
+  getMovie(id: number){
+    return this.http.get<Movie>(`${TMDB_API_URL}movie/${id}?api_key=${environment().tmdb_apikey}&language=en-US`).toPromise();
   }
 
   getReviews(id: number){
