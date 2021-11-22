@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppendBaseImgUrlPipe } from './shared/pipes/append-base-img-url.pipe';
 import { DateRuntimePipe } from './shared/pipes/date-runtime.pipe';
 import { RatingPipe } from './shared/pipes/rating.pipe';
+import { HomeComponent } from './pages';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { RatingPipe } from './shared/pipes/rating.pipe';
     ReactiveFormsModule
   ],
   providers: [
+    HomeComponent,
     NavbarDirective,
     MovieCardDirective,
     YouTubeVideoService,
