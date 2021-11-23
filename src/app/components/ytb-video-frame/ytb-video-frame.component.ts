@@ -3,7 +3,6 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { YouTubeVideoService } from 'src/app/services';
 import { YOUTUBE_BASE_URL } from 'src/app/config';
 import { Video } from 'src/app/models/video';
-import { DEFAULT_TERM } from 'src/app/config/youtube';
 
 @Component({
   selector: 'app-ytb-video-frame',
