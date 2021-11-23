@@ -3,10 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { TMDB_API_URL } from "../config";
 import { MovieReviews } from "../models/movie-reviews";
 import { environment } from "src/environments/environment";
-import { Observable } from 'rxjs';
 import { PopularMovies } from '../models/popular-movies';
 import { Movie } from '../models/movie';
-
 
 @Injectable({
   providedIn: 'root'
