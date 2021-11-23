@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 .container {
-  margin: 0%;
-  padding: 0px;
+  background-color: #0B141F;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   width: 100vw;
   overflow: visible;
+  position: relative;
 }
 
 .bg-cinema {
     background: url('../../../assets/movie-detail/img-cinema.png');
-    width: 100vw;
+    width: 98.78vw;
+    height: 80vh;
     z-index: 20;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .text-container {
@@ -19,6 +22,7 @@
     color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     position: relative;
+    top: 40px;
     z-index: 30;
 }
 
@@ -32,5 +36,6 @@
 
 .popular-movies {
     position: relative;
+    top: 40px;
     z-index: 30;
 }

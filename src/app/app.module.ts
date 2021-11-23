@@ -19,6 +19,9 @@ import { AppendBaseImgUrlPipe } from './shared/pipes/append-base-img-url.pipe';
 import { DateRuntimePipe } from './shared/pipes/date-runtime.pipe';
 import { RatingPipe } from './shared/pipes/rating.pipe';
 import { HomeComponent } from './pages';
+import { LatestRankedMoviesComponent } from './components/latest-ranked-movies/latest-ranked-movies.component';
+import { MostRankedMoviesComponent } from './components/most-ranked-movies/most-ranked-movies.component';
+import { MovieLittleCardComponent } from './shared/components/movie-little-card/movie-little-card.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { HomeComponent } from './pages';
     AppendBaseImgUrlPipe,
     DateRuntimePipe,
     RatingPipe,
+    LatestRankedMoviesComponent,
+    MostRankedMoviesComponent,
+    MovieLittleCardComponent,
   ],
   imports: [
     BrowserModule,
