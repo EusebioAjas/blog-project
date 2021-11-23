@@ -1,7 +1,7 @@
 <ul class="movies-container">
   <li
     class="card"
-    *ngFor="let movie of movies"
+    *ngFor="let movie of movies.slice(0, 4)"
     routerLink="/detail/{{movie.id}}"
     routerLinkActive="router-link-active"
   >

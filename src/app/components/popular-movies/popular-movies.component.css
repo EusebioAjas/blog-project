@@ -1,6 +1,5 @@
 .movies-container {
   align-items: center;
-  background-color: #0B141F;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

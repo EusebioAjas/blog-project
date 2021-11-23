@@ -23,6 +23,7 @@ import { HomeComponent } from './pages';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     NavbarComponent,
     NavbarDirective,
     MovieCardDirective,
@@ -47,9 +48,6 @@ import { HomeComponent } from './pages';
     ReactiveFormsModule
   ],
   providers: [
-    HomeComponent,
-    NavbarDirective,
-    MovieCardDirective,
     YouTubeVideoService,
     TMDBDataService,
   ],
