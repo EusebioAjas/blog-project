@@ -58,28 +58,161 @@
 
 <ng-template #contenido2 let-modal2>
     <div class="modal-header">
-        <h4 class="modal-title">Registrar</h4>
+        <h4 class="modal-title">Registro</h4>
         <button class="close" appNavbar type="button" (click)="modal2.dismiss()">
             <span aria-hidden="true">X</span>
         </button>
     </div>
     <div class="modal-body">
-        <form [formGroup]="formularioDeIngreso" >
+        <form [formGroup]="formularioDeRegistro" >
             Usuario: <input 
             type="text"
             class="form-control" 
             formControlName="username"
-            [class.is-invalid]="formularioDeIngreso.get('username')?.touched && formularioDeIngreso.get('username')?.invalid">
+            [class.is-invalid]="formularioDeRegistro.get('username')?.touched && formularioDeRegistro.get('username')?.invalid">
             Contraseña: <input 
             type="password" 
             class="form-control" 
             formControlName="userpassword"
-            [class.is-invalid]="formularioDeIngreso.get('userpassword')?.touched && formularioDeIngreso.get('userpassword')?.invalid">
+            [class.is-invalid]="formularioDeRegistro.get('userpassword')?.touched && formularioDeRegistro.get('userpassword')?.invalid">
+            Correo: <input 
+            type="email" 
+            id="email"
+            class="form-control" 
+            formControlName="useremail"
+            [class.is-invalid]="formularioDeRegistro.get('useremail')?.touched && formularioDeRegistro.get('useremail')?.invalid">
+            <label for="news" class="news">¿Quieres recibir por correo novedades de tus categorias preferidas?</label>
+            <input 
+            type="checkbox" 
+            id="news" 
+            class="form-control newsprincipal"  
+            formControlName="usernews"
+            (click)="activarCategorias()"> 
+            <ul id="categories" class="inicio">
+                <label for="actioncategory" class="actioncategory news">Acción</label>
+                <input 
+                type="checkbox" 
+                id="actioncategory" 
+                class="form-control checkcategories"  
+                formControlName="useractioncategory"> 
+                <label for="animationcategory" class="animationcategory news">Animación</label>
+                <input 
+                type="checkbox" 
+                id="animationcategory" 
+                class="form-control checkcategories"  
+                formControlName="useranimationcategory"> 
+                <label for="adventurecategory" class="adventurecategory news">Aventura</label>
+                <input 
+                type="checkbox" 
+                id="adventurecategory" 
+                class="form-control checkcategories"  
+                formControlName="useradventurecategory"> 
+                <label for="warcategory" class="comedycategory news">Bélica</label>
+                <input 
+                type="checkbox" 
+                id="warcategory" 
+                class="form-control checkcategories"  
+                formControlName="userwarcategory"> 
+                <label for="sciencefictioncategory" class="comedycategory news">Ciencia ficción</label>
+                <input 
+                type="checkbox" 
+                id="sciencefictioncategory" 
+                class="form-control checkcategories"  
+                formControlName="usersciencefictioncategory"> 
+                <label for="comedycategory" class="comedycategory news">Comedia</label>
+                <input 
+                type="checkbox" 
+                id="comedycategory" 
+                class="form-control checkcategories"  
+                formControlName="usercomedycategory"> 
+                <label for="crimecategory" class="comedycategory news">Crimen</label>
+                <input 
+                type="checkbox" 
+                id="crimecategory" 
+                class="form-control checkcategories"  
+                formControlName="usercrimecategory"> 
+                <label for="documentarycategory" class="comedycategory news">Documental</label>
+                <input 
+                type="checkbox" 
+                id="documentarycategory" 
+                class="form-control checkcategories"  
+                formControlName="userdocumentarycategory"> 
+                <label for="dramacategory" class="comedycategory news">Drama</label>
+                <input 
+                type="checkbox" 
+                id="dramacategory" 
+                class="form-control checkcategories"  
+                formControlName="userdramacategory"> 
+                <label for="familycategory" class="comedycategory news">Familia</label>
+                <input 
+                type="checkbox" 
+                id="familycategory" 
+                class="form-control checkcategories"  
+                formControlName="userfamilycategory"> 
+                <label for="fantasycategory" class="comedycategory news">Fantasía</label>
+                <input 
+                type="checkbox" 
+                id="fantasycategory" 
+                class="form-control checkcategories"  
+                formControlName="userfantasycategory"> 
+                <label for="historycategory" class="comedycategory news">Historia</label>
+                <input 
+                type="checkbox" 
+                id="historycategory" 
+                class="form-control checkcategories"  
+                formControlName="userhistorycategory"> 
+                <label for="mysterycategory" class="comedycategory news">Misterio</label>
+                <input 
+                type="checkbox" 
+                id="mysterycategory" 
+                class="form-control checkcategories"  
+                formControlName="usermysterycategory"> 
+                <label for="musiccategory" class="comedycategory news">Música</label>
+                <input 
+                type="checkbox" 
+                id="musiccategory" 
+                class="form-control checkcategories"  
+                formControlName="usermusiccategory"> 
+                <label for="tvmoviecategory" class="comedycategory news">Pelicula de TV</label>
+                <input 
+                type="checkbox" 
+                id="tvmoviecategory" 
+                class="form-control checkcategories"  
+                formControlName="usertvmoviecategory"> 
+                <label for="romancecategory" class="comedycategory news">Romance</label>
+                <input 
+                type="checkbox" 
+                id="romancecategory" 
+                class="form-control checkcategories"  
+                formControlName="userromancecategory"> 
+                <label for="trhillercategory" class="comedycategory news">Suspenso</label>
+                <input 
+                type="checkbox" 
+                id="trhillercategory" 
+                class="form-control checkcategories"  
+                formControlName="usertrhillercategory"> 
+                <label for="horrorcategory" class="comedycategory news">Terror</label>
+                <input 
+                type="checkbox" 
+                id="horrorcategory" 
+                class="form-control checkcategories"  
+                formControlName="userhorrorcategory"> 
+                <label for="westerncategory" class="comedycategory news">Western</label>
+                <input 
+                type="checkbox" 
+                id="westerncategory" 
+                class="form-control checkcategories"  
+                formControlName="userwesterncategory"> 
+                <label class="inicio alertcategories">Selecciona al menos una categoria...</label>
+            </ul>       
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="modal2.close()">
+        <button type="button" class="btn btn-danger" (click)="loginModal(contenido1)">
             Iniciar sesión
+        </button>
+        <button type="button" class="btn btn-success" (click)="registrar()">
+            Registrarse
         </button>
     </div>
 </ng-template>

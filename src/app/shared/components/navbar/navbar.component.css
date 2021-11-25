@@ -24,3 +24,28 @@
     background-color: #2D2A2A;
     color: #ffffff;
 }
+
+.news {
+    position: absolute;
+    margin: 0.2% 0% 0% 6%;
+}
+
+.inicio {
+    display: none;
+}
+
+input[type=checkbox] {
+    margin: 0%;
+    padding: 0%;
+    width: 5%;
+}
+
+.checkcategories {
+    margin: 0%;
+    padding: 0%;
+    width: 20%;
+}
+
+#categories {
+    margin: 3% 0% 0% 6%;
+}
