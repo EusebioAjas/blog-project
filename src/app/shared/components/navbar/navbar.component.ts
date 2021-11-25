@@ -29,5 +29,15 @@ export class NavbarComponent implements OnInit {
     this.formularioDeIngreso.get('username')?.touched
   }
 
+  RegisterModal(contenido:any){
+    this.modal.dismissAll();
+
+    this.modal.open(contenido,{
+      windowClass:'modal-register'
+    })
+
+    this.formularioDeIngreso.get('username')?.touched
+  }
+
 
 }

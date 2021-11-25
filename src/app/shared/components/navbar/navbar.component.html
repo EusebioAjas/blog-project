@@ -16,15 +16,17 @@
         </div>
 
         <div class="form-inline my-lg-0 d-flex justify-content-end">
-            <button appNavbar type="button" [isButton]="true" class="btn btn-light px-5 mr-5 buttonLogin" href="#" (click)="loginModal(contenido)">Login</button>
+            <button appNavbar type="button" [isButton]="true" class="btn btn-light px-5 mr-5 buttonLogin" href="#" (click)="loginModal(contenido1)">Login</button>
         </div>
     </nav>
 </div>
 
-<ng-template #contenido let-modal>
+<!-----------------------------------Apartado pantalla LOGIN----------------------------------------------->
+
+<ng-template #contenido1 let-modal1>
     <div class="modal-header">
         <h4 class="modal-title">Inicio de Sesion</h4>
-        <button class="close" type="button" (click)="modal.dismiss()">
+        <button class="close" appNavbar type="button" (click)="modal1.dismiss()">
             <span aria-hidden="true">X</span>
         </button>
     </div>
@@ -43,9 +45,41 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="modal.close()">
-            Registrate
+        <button type="button" class="btn btn-danger" (click)="RegisterModal(contenido2)">
+            Registrarse
+        </button>
+        <button type="button" class="btn btn-success" (click)="modal1.close()">
+            Iniciar sesión
         </button>
     </div>
 </ng-template>
 
+<!-----------------------------------Apartado pantalla REGISTER----------------------------------------------->
+
+<ng-template #contenido2 let-modal2>
+    <div class="modal-header">
+        <h4 class="modal-title">Registrar</h4>
+        <button class="close" appNavbar type="button" (click)="modal2.dismiss()">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="formularioDeIngreso" >
+            Usuario: <input 
+            type="text"
+            class="form-control" 
+            formControlName="username"
+            [class.is-invalid]="formularioDeIngreso.get('username')?.touched && formularioDeIngreso.get('username')?.invalid">
+            Contraseña: <input 
+            type="password" 
+            class="form-control" 
+            formControlName="userpassword"
+            [class.is-invalid]="formularioDeIngreso.get('userpassword')?.touched && formularioDeIngreso.get('userpassword')?.invalid">
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="modal2.close()">
+            Iniciar sesión
+        </button>
+    </div>
+</ng-template>
