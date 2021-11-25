@@ -50,19 +50,20 @@ export class NavbarComponent implements OnInit {
 
   activarCategorias() {
     if($('.newsprincipal').is(':checked')){
-      $('#categories').css('display','block');
+      $('#categories').show(1000);
     }else{
-      $('#categories').css('display','none');
+      $('#categories').hide(1000);
     }
   }
 
   registrar() {
     if($('.newsprincipal').is(':checked')){
       if($('.checkcategories').is(':checked')){
-        $('.alertcategories').css('display','none');
+        $('.alertcategories').hide();
         alert("Seleccionaste al menos una categoria, ciudadano.");
       }else{
-        $('.alertcategories').css('display','block');
+        $('.alertcategories').css('color', '#FC1342');
+        $('.alertcategories').show();
       }
     }else{
       alert("No seleccionaste que quieres recibir novedades, entendido ciudadano.");
