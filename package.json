@@ -21,6 +21,7 @@
     "@angular/router": "~12.2.0",
     "@elemental-concept/env-bakery": "^0.0.5",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "angular2-qrcode": "^2.0.3",
     "bootstrap": "^4.5.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
