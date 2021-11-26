@@ -31,16 +31,20 @@
         </button>
     </div>
     <div class="modal-body">
-        <form [formGroup]="formularioDeIngreso" >
+        <form [formGroup]="formularioDeIngreso" id="basic-form" class="formularioDeIngreso">
             Usuario: <input 
             type="text"
             class="form-control" 
+            id="usernameLogin"
             formControlName="username"
+            minlength = "3"
             [class.is-invalid]="formularioDeIngreso.get('username')?.touched && formularioDeIngreso.get('username')?.invalid">
             Contraseña: <input 
             type="password" 
-            class="form-control" 
+            class="form-control"
+            id="passwordLogin" 
             formControlName="userpassword"
+            minlength = "3"
             [class.is-invalid]="formularioDeIngreso.get('userpassword')?.touched && formularioDeIngreso.get('userpassword')?.invalid">
         </form>
     </div>
@@ -48,7 +52,7 @@
         <button type="button" class="btn btn-danger" (click)="RegisterModal(contenido2)">
             Registrarse
         </button>
-        <button type="button" class="btn btn-success" (click)="modal1.close()">
+        <button type="button" class="btn btn-success" (click)="login()">
             Iniciar sesión
         </button>
     </div>
@@ -64,21 +68,26 @@
         </button>
     </div>
     <div class="modal-body">
-        <form [formGroup]="formularioDeRegistro" >
+        <form [formGroup]="formularioDeRegistro"  class="formRegisterComplety">
             Usuario: <input 
             type="text"
             class="form-control" 
+            id="usernameRegister"
             formControlName="username"
+            minlength = "3"
             [class.is-invalid]="formularioDeRegistro.get('username')?.touched && formularioDeRegistro.get('username')?.invalid">
             Contraseña: <input 
             type="password" 
             class="form-control" 
+            id="passwordRegister"
+            minlength = "3"
             formControlName="userpassword"
             [class.is-invalid]="formularioDeRegistro.get('userpassword')?.touched && formularioDeRegistro.get('userpassword')?.invalid">
             Correo: <input 
             type="email" 
-            id="email"
+            id="emailRegister"
             class="form-control" 
+            required
             formControlName="useremail"
             [class.is-invalid]="formularioDeRegistro.get('useremail')?.touched && formularioDeRegistro.get('useremail')?.invalid">
             <label for="news" class="news">¿Quieres recibir por correo novedades de tus categorias preferidas?</label>
@@ -89,120 +98,159 @@
             formControlName="usernews"
             (click)="activarCategorias()"> 
             <ul id="categories" class="inicio">
-                <label for="actioncategory" class="actioncategory news">Acción</label>
+                <label for="action" class="actioncategory news">Acción</label>
                 <input 
                 type="checkbox" 
-                id="actioncategory" 
+                id="action" 
                 class="form-control checkcategories"  
-                formControlName="useractioncategory"> 
-                <label for="animationcategory" class="animationcategory news">Animación</label>
+                formControlName="useractioncategory"
+                value="action"
+                is=> 
+
+                <label for="animation" class="animationcategory news">Animación</label>
                 <input 
                 type="checkbox" 
-                id="animationcategory" 
+                id="animation" 
                 class="form-control checkcategories"  
-                formControlName="useranimationcategory"> 
-                <label for="adventurecategory" class="adventurecategory news">Aventura</label>
+                formControlName="useranimationcategory"
+                value="animation"> 
+
+                <label for="adventure" class="adventurecategory news">Aventura</label>
                 <input 
                 type="checkbox" 
-                id="adventurecategory" 
+                id="adventure" 
                 class="form-control checkcategories"  
-                formControlName="useradventurecategory"> 
-                <label for="warcategory" class="comedycategory news">Bélica</label>
+                formControlName="useradventurecategory"
+                value="adventure"> 
+
+                <label for="war" class="comedycategory news">Bélica</label>
                 <input 
                 type="checkbox" 
-                id="warcategory" 
+                id="war" 
                 class="form-control checkcategories"  
-                formControlName="userwarcategory"> 
-                <label for="sciencefictioncategory" class="comedycategory news">Ciencia ficción</label>
+                formControlName="userwarcategory"
+                value="war"> 
+
+                <label for="science fiction" class="comedycategory news">Ciencia ficción</label>
                 <input 
                 type="checkbox" 
-                id="sciencefictioncategory" 
+                id="science fiction" 
                 class="form-control checkcategories"  
-                formControlName="usersciencefictioncategory"> 
-                <label for="comedycategory" class="comedycategory news">Comedia</label>
+                formControlName="usersciencefictioncategory"
+                value="science fiction"> 
+
+                <label for="comedy" class="comedycategory news">Comedia</label>
                 <input 
                 type="checkbox" 
-                id="comedycategory" 
+                id="comedy" 
                 class="form-control checkcategories"  
-                formControlName="usercomedycategory"> 
-                <label for="crimecategory" class="comedycategory news">Crimen</label>
+                formControlName="usercomedycategory"
+                value="comedy"> 
+
+                <label for="crime" class="comedycategory news">Crimen</label>
                 <input 
                 type="checkbox" 
-                id="crimecategory" 
+                id="crime" 
                 class="form-control checkcategories"  
-                formControlName="usercrimecategory"> 
-                <label for="documentarycategory" class="comedycategory news">Documental</label>
+                formControlName="usercrimecategory"
+                value="crime"> 
+
+                <label for="documentary" class="comedycategory news">Documental</label>
                 <input 
                 type="checkbox" 
-                id="documentarycategory" 
+                id="documentary" 
                 class="form-control checkcategories"  
-                formControlName="userdocumentarycategory"> 
-                <label for="dramacategory" class="comedycategory news">Drama</label>
+                formControlName="userdocumentarycategory"
+                value="documentary"> 
+
+                <label for="drama" class="comedycategory news">Drama</label>
                 <input 
                 type="checkbox" 
-                id="dramacategory" 
+                id="drama" 
                 class="form-control checkcategories"  
-                formControlName="userdramacategory"> 
-                <label for="familycategory" class="comedycategory news">Familia</label>
+                formControlName="userdramacategory"
+                value="drama"> 
+
+                <label for="family" class="comedycategory news">Familia</label>
                 <input 
                 type="checkbox" 
-                id="familycategory" 
+                id="family" 
                 class="form-control checkcategories"  
-                formControlName="userfamilycategory"> 
-                <label for="fantasycategory" class="comedycategory news">Fantasía</label>
+                formControlName="userfamilycategory"
+                value="family"> 
+
+                <label for="fantasy" class="comedycategory news">Fantasía</label>
                 <input 
                 type="checkbox" 
-                id="fantasycategory" 
+                id="fantasy" 
                 class="form-control checkcategories"  
-                formControlName="userfantasycategory"> 
-                <label for="historycategory" class="comedycategory news">Historia</label>
+                formControlName="userfantasycategory"
+                value="fantasy"> 
+
+                <label for="history" class="comedycategory news">Historia</label>
                 <input 
                 type="checkbox" 
-                id="historycategory" 
+                id="history" 
                 class="form-control checkcategories"  
-                formControlName="userhistorycategory"> 
-                <label for="mysterycategory" class="comedycategory news">Misterio</label>
+                formControlName="userhistorycategory"
+                value="history"> 
+
+                <label for="mystery" class="comedycategory news">Misterio</label>
                 <input 
                 type="checkbox" 
-                id="mysterycategory" 
+                id="mystery" 
                 class="form-control checkcategories"  
-                formControlName="usermysterycategory"> 
-                <label for="musiccategory" class="comedycategory news">Música</label>
+                formControlName="usermysterycategory"
+                value="mystery"> 
+
+                <label for="music" class="comedycategory news">Música</label>
                 <input 
                 type="checkbox" 
-                id="musiccategory" 
+                id="music" 
                 class="form-control checkcategories"  
-                formControlName="usermusiccategory"> 
-                <label for="tvmoviecategory" class="comedycategory news">Pelicula de TV</label>
+                formControlName="usermusiccategory"
+                value="music"> 
+
+                <label for="tv movie" class="comedycategory news">Pelicula de TV</label>
                 <input 
                 type="checkbox" 
-                id="tvmoviecategory" 
+                id="tv movie" 
                 class="form-control checkcategories"  
-                formControlName="usertvmoviecategory"> 
-                <label for="romancecategory" class="comedycategory news">Romance</label>
+                formControlName="usertvmoviecategory"
+                value="tv movie"> 
+
+                <label for="romance" class="comedycategory news">Romance</label>
                 <input 
                 type="checkbox" 
-                id="romancecategory" 
+                id="romance" 
                 class="form-control checkcategories"  
-                formControlName="userromancecategory"> 
-                <label for="trhillercategory" class="comedycategory news">Suspenso</label>
+                formControlName="userromancecategory"
+                value="romance"> 
+
+                <label for="thriller" class="comedycategory news">Suspenso</label>
                 <input 
                 type="checkbox" 
-                id="trhillercategory" 
+                id="thriller" 
                 class="form-control checkcategories"  
-                formControlName="usertrhillercategory"> 
-                <label for="horrorcategory" class="comedycategory news">Terror</label>
+                formControlName="userthrillercategory"
+                value="thriller"> 
+
+                <label for="horror" class="comedycategory news">Terror</label>
                 <input 
                 type="checkbox" 
-                id="horrorcategory" 
+                id="horror" 
                 class="form-control checkcategories"  
-                formControlName="userhorrorcategory"> 
-                <label for="westerncategory" class="comedycategory news">Western</label>
+                formControlName="userhorrorcategory"
+                value="horror"> 
+
+                <label for="western" class="comedycategory news">Western</label>
                 <input 
                 type="checkbox" 
-                id="westerncategory" 
+                id="western" 
                 class="form-control checkcategories"  
-                formControlName="userwesterncategory"> 
+                formControlName="userwesterncategory"
+                value="western"> 
+
                 <b><label class="inicio alertcategories">Selecciona al menos una categoria...</label></b>
             </ul>       
         </form>
