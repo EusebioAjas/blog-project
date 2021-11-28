@@ -1,0 +1,9 @@
+p {
+  display: -webkit-box;
+  text-overflow: Ellipsis; /* will make [...] at the end */
+  overflow: hidden; /* older browsers */
+  text-align: justify;
+  -webkit-line-clamp: 4;
+  width: 450px;
+  -webkit-box-orient: vertical;
+}

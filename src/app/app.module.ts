@@ -22,6 +22,8 @@ import { HomeComponent } from './pages';
 import { LatestRankedMoviesComponent } from './components/latest-ranked-movies/latest-ranked-movies.component';
 import { MostRankedMoviesComponent } from './components/most-ranked-movies/most-ranked-movies.component';
 import { MovieLittleCardComponent } from './shared/components/movie-little-card/movie-little-card.component';
+import { MovieReviewComponent } from './components/movie-review/movie-review.component';
+import { QRCodeModule } from 'angular2-qrcode';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { MovieLittleCardComponent } from './shared/components/movie-little-card/
     LatestRankedMoviesComponent,
     MostRankedMoviesComponent,
     MovieLittleCardComponent,
+    MovieReviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { MovieLittleCardComponent } from './shared/components/movie-little-card/
     NgbModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    QRCodeModule,
   ],
   providers: [
     YouTubeVideoService,
