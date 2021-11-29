@@ -1,0 +1,31 @@
+<div class=" bg-page row justify-content-center mt-5 mb-5">
+  <div class="form-container justify-content-center">
+    <h2 class="text-center">Login</h2>
+    <div class="text-center">
+      Doesn't have an account yet? <a routerLink="/public/register">Register</a>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="mx-4 my-4">
+        <div class="form-group mb-3">
+          <label for="emailAddress">Email address</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="name@example.com"
+            id="emailAddress" />
+          <small *ngIf="email.touched && email.hasError('required')">Email is required</small>
+          <small *ngIf="email.touched && email.hasError('email')">Email must be valid</small>
+        </div>
+        <div class="form-group mb-3">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Your password" formControlName="password" class="form-control"
+            id="password" />
+          <small *ngIf="password.touched && password.hasError('required')">Password is required</small>
+          <small *ngIf="password.touched && password.hasError('pattern')">Must be a valid password</small>
+        </div>
+        <div class="text-center mb-2">
+          <button type="submit" [disabled]="!loginForm.valid" class="btn btn-outline-primary">
+            Login
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
