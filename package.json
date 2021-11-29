@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@auth0/angular-jwt": "^5.0.2",
     "@elemental-concept/env-bakery": "^0.0.5",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "angular2-qrcode": "^2.0.3",
