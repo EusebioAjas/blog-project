@@ -8,7 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { YouTubeVideoService } from './services';
 import { YtbVideoFrameComponent } from './components';
-import { FooterComponent, MovieCardComponent, NavbarComponent, NgbdRatingBasic, PaginationButtonsComponent } from './shared/components';
+import {
+  FooterComponent,
+  MovieCardComponent,
+  NavbarComponent,
+  NgbdRatingBasic,
+  PaginationButtonsComponent,
+} from './shared/components';
 import { MovieCardDirective, NavbarDirective } from './shared/directives';
 import { TMDBDataService } from './services/tmdb-data.service';
 import { PopularMoviesComponent } from './components/popular-movies/popular-movies.component';
@@ -24,7 +30,11 @@ import { MostRankedMoviesComponent } from './components/most-ranked-movies/most-
 import { MovieLittleCardComponent } from './shared/components/movie-little-card/movie-little-card.component';
 import { MovieReviewComponent } from './components/movie-review/movie-review.component';
 import { QRCodeModule } from 'angular2-qrcode';
+import { JwtModule } from '@auth0/angular-jwt';
 
+export function tokenGetter() {
+  return localStorage.getItem("access")
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,11 +66,14 @@ import { QRCodeModule } from 'angular2-qrcode';
     HttpClientModule,
     ReactiveFormsModule,
     QRCodeModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ['localhost:3000']
+      }
+    }),
   ],
-  providers: [
-    YouTubeVideoService,
-    TMDBDataService,
-  ],
-  bootstrap: [AppComponent]
+  providers: [YouTubeVideoService, TMDBDataService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
