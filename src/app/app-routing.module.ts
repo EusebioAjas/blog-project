@@ -1,6 +1,10 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './guards/auth.guard';
+import { HomeComponent } from './pages';
 
 const routes: Routes = [
   {
@@ -9,14 +13,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./private/private.module').then((m) => m.PrivateModule),
   },
-  {
-    path: 'public',
-    loadChildren: () =>
-      import('./public/public.module').then((m) => m.PublicModule),
-  },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'detail/:id', component: MovieDetailComponent },
   {
     path: '**',
-    redirectTo: 'public',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
 ];

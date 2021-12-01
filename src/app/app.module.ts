@@ -31,12 +31,16 @@ import { MovieLittleCardComponent } from './shared/components/movie-little-card/
 import { MovieReviewComponent } from './components/movie-review/movie-review.component';
 import { QRCodeModule } from 'angular2-qrcode';
 import { JwtModule } from '@auth0/angular-jwt';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access")
 }
 @NgModule({
   declarations: [
+    LoginComponent,
+    RegisterComponent,
     AppComponent,
     HomeComponent,
     NavbarComponent,
