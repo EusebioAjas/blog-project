@@ -2,19 +2,17 @@
 
 .container {
   background-color: #0B141F;
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  width: 100vw;
-  overflow: visible;
+  margin: 0px;
+  padding: 0px;
   position: relative;
 }
 
 .bg-cinema {
     background: url('../../../assets/movie-detail/img-cinema.png');
-    width: 98.78vw;
-    height: 80vh;
+    height: 80.8vh;
+    overflow: auto;
+    width: 98.75vw;
     z-index: 20;
-    overflow: hidden;
 }
 
 .text-container {
