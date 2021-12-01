@@ -7,7 +7,7 @@
 hr {
     background-color: #ffff;
     position: relative;
-    top: 1.5em;
+    top: -0.5em;
 }
 
 .container2 {
@@ -18,23 +18,17 @@ hr {
 }
 
 .container3 {
-
     color: #ffff;
-    justify-content: center;
     position: relative;
-    padding: 0em 10em 2px 10em;
+    padding: 0em 3% 0% 3%;
 }
 
 .tittle {
-    position: absolute;
-    left: 3%;
-    top: -8%;
+    position: relative;
 }
 
 .buttons {
-    position: absolute;
-    top: 0%;
-    right: 2%;
+    position: relative;
 }
 
 .movies-container {

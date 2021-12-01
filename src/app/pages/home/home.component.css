@@ -11,7 +11,7 @@
     background: url('../../../assets/movie-detail/img-cinema.png');
     height: 80.8vh;
     overflow: auto;
-    width: 98.75vw;
+    width: 100vw;
     z-index: 20;
 }
 
