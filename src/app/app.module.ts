@@ -34,9 +34,10 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MovieCommentComponent } from './components/movie-comment/movie-comment.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 export function tokenGetter() {
-  return localStorage.getItem("access")
+  return localStorage.getItem('access');
 }
 @NgModule({
   declarations: [
@@ -72,11 +73,12 @@ export function tokenGetter() {
     HttpClientModule,
     ReactiveFormsModule,
     QRCodeModule,
+    NgxPaginationModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ['localhost:3000']
-      }
+        allowedDomains: ['localhost:3000'],
+      },
     }),
   ],
   providers: [YouTubeVideoService, TMDBDataService],

@@ -1,63 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-.container {
+.container-primero {
     background-color: #0B141F;
-    margin: 0% 0% 0% 0%;
-    padding: 3em 30em 50% 64.4%;
-    width: 100vw;
-    height: 22em;
 }
 
 hr {
     background-color: #ffff;
     position: relative;
-    top: 1.5em;
+    top: -0.5em;
 }
 
 .container2 {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
-    padding: 0%;
     position: relative;
-    left: -23em;
-    margin: 0%;
-    width: 75vw;
+    padding: 2% 10% 2% 10%;
 }
 
 .container3 {
-    
     color: #ffff;
-    justify-content: center;
     position: relative;
-    padding: 0em 10em 2px 10em;
+    padding: 0em 3% 0% 3%;
 }
 
 .tittle {
-    position: absolute;
-    left: -3%;
-    top: -8%;
+    position: relative;
 }
 
 .buttons {
-    position: absolute;
-    top: 0%;
-    right: 2%;
+    position: relative;
 }
 
 .movies-container {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  margin: 0px;
-  padding: 60px 0px 0px 0px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin: 0px;
+    padding: 60px 0px 0px 0px;
 }
 
 .card {
     height: 240px;
     margin: 0.5em;
     width: 160px;
-  position: relative;
+    position: relative;
+}
+.pagination /deep/ .ngx-pagination .current {
+  background: red;
+}
+
+.text-color-white {
+  color: #ffff;
+  font-weight: bold;
 }
