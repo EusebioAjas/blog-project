@@ -1,5 +1,5 @@
 import { Movie } from './movie';
-export interface PopularMovies {
+export interface MovieResponse {
   page: number;
   results: Movie[];
   total_results: number;
