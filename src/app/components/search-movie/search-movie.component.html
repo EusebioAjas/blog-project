@@ -1,0 +1,16 @@
+<div class="search-bar">
+  <div class="d-flex justify-content-center">
+    <input class="mb-2" name="query" placeholder="Type something..." [(ngModel)]="searchTerm" />
+    <button (click)="search()" class="btn btn-primary ml-2 mb-2">Search</button>
+  </div>
+</div>
+<div class="container-fluid" *ngIf="movies">
+  <div class="container2 container-fluid">
+    <ul class="row m-2">
+      <li class="card" *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}"
+        routerLinkActive="router-link-active">
+        <app-movie-little-card [movie]="movie"></app-movie-little-card>
+      </li>
+    </ul>
+  </div>
+</div>
