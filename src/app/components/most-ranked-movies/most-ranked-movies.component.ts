@@ -5,20 +5,25 @@ import { TMDBDataService } from 'src/app/services/tmdb-data.service';
 @Component({
   selector: 'app-most-ranked-movies',
   templateUrl: './most-ranked-movies.component.html',
-  styleUrls: ['./most-ranked-movies.component.css']
+  styleUrls: ['./most-ranked-movies.component.css'],
 })
 export class MostRankedMoviesComponent implements OnInit {
   movies!: Movie[];
-  
+  page: number = 1;
+  totalPages!: number;
+
   constructor(private tmdbService: TMDBDataService) {}
 
   ngOnInit(): void {
-    this.getPopularMovies();
+    this.getTopRatedMovies(this.page);
   }
 
-  getPopularMovies(): void {
-    this.tmdbService.getPopular().then(
-      (response) => (this.movies = response.results),
+  getTopRatedMovies(pageNumber: number): void {
+    this.tmdbService.getTopRated(pageNumber).subscribe(
+      (response) => {
+        this.movies = response.results;
+        this.totalPages = response.total_pages;
+      },
       (error) => {
         alert('Error:' + error.statusText);
       }

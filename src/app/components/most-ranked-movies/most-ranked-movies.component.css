@@ -48,3 +48,11 @@ hr {
     width: 160px;
     position: relative;
 }
+.pagination /deep/ .ngx-pagination .current {
+  background: red;
+}
+
+.text-color-white {
+  color: #ffff;
+  font-weight: bold;
+}
