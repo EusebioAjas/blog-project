@@ -11,7 +11,7 @@ export class CommentService {
 
   getComments(movieId: number) {
     return this.httpClient
-      .get<Comment[]>(`${API_BASE_URL}/comments/${movieId}`)
+      .get<Comment[]>(`${API_BASE_URL}/movies/${movieId}/comments`)
       .toPromise();
   }
 }
