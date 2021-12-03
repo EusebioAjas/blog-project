@@ -52,14 +52,25 @@ hr {
 }
 
 section {
-  /*Graceful degradation para Firefox*/
+  /*Para ningún scroll
+  Graceful degradation para Firefox
+  overflow: overlay;*/
+
+  overflow: auto;
+  /*Firefox*/
   overflow: overlay;
 }
 
 /*Webkit(Chrome, Android browser, Safari, Edge...)*/
 section::-webkit-scrollbar {
+  /*Para ningún scroll
   display: none;
-  width: 0%;
+  width: 0%;*/
+
+  display: none;
+  width: 0px;
+  height: 10px;
+  background-color: lightblue;
 }
 
 section:hover::-webkit-scrollbar {
