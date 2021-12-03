@@ -51,33 +51,21 @@ hr {
   width: 93%;
 }
 
-section {
-  /*Para ningún scroll
-  Graceful degradation para Firefox
-  overflow: overlay;*/
 
-  overflow: auto;
-  /*Firefox*/
-  overflow: overlay;
-}
 
 /*Webkit(Chrome, Android browser, Safari, Edge...)*/
-section::-webkit-scrollbar {
-  /*Para ningún scroll
-  display: none;
-  width: 0%;*/
-
-  display: none;
-  width: 0px;
-  height: 10px;
+.text-review::-webkit-scrollbar {
   background-color: lightblue;
+  display: none;
+  height: 10px;
+  width: 5px;
 }
 
-section:hover::-webkit-scrollbar {
+.text-review:hover::-webkit-scrollbar {
   display: initial;
 }
 
-section::-webkit-scrollbar-thumb {
+.text-review::-webkit-scrollbar-thumb {
   background-color: #09C;
 }
 
@@ -85,20 +73,28 @@ section::-webkit-scrollbar-thumb {
   display: -webkit-box;
   height: 148px;
   max-width: 100%;
-  margin: 0 auto;
 
   line-height: 1.3;
   -webkit-line-clamp: 9;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
+  
+  overflow: auto;
 }
 
 .text-review:hover {
   white-space: initial;
   -webkit-line-clamp: initial;
-  /*overflow: auto;
-  max-height: 100%;
-  width: calc(100% + 17px) !important;*/
+}
+
+@media (max-heigth: 160px) {
+  .text-review {
+    font-size: 3px;
+  }
+}
+
+section:hover {
+  padding: auto !important;
 }
 
 .text-autor {
