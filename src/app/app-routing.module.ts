@@ -5,6 +5,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { RegisterComponent } from './components/register/register.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './pages';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'detail/:id', component: MovieDetailComponent },
+  { path: 'news', component: NewsPageComponent },
   {
     path: '**',
     redirectTo: 'home',

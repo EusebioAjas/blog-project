@@ -35,6 +35,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { MovieCommentComponent } from './components/movie-comment/movie-comment.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NewsPageComponent } from './pages/news-page/news-page.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access');
@@ -64,6 +65,7 @@ export function tokenGetter() {
     MovieLittleCardComponent,
     MovieReviewComponent,
     MovieCommentComponent,
+    NewsPageComponent,
   ],
   imports: [
     BrowserModule,
