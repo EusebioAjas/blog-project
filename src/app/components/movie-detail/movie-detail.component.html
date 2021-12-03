@@ -1,11 +1,7 @@
 <div class="background" *ngIf="movie">
   <div class="wrapper">
     <div class="item">
-      <img
-        [src]="movie.poster_path | appendBaseImgUrl"
-        class="movie-img"
-        alt="..."
-      />
+      <img [src]="movie.poster_path | appendBaseImgUrl" class="movie-img" alt="..." />
     </div>
     <div class="item movie-overview">
       <h2 class="text-left">
@@ -20,6 +16,9 @@
       <app-ytb-video-frame [queryYtb]="movie.title"></app-ytb-video-frame>
     </div>
   </div>
+  <h3>Review</h3>
   <app-movie-review [movieId]="movie.id"></app-movie-review>
+  <h3>comments</h3>
+  <app-movie-comment [movieId]="movie.id"></app-movie-comment>
   <qr-code [value]="'https://github.com/EusebioAjas/blog-project'"></qr-code>
 </div>

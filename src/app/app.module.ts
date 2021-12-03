@@ -33,6 +33,7 @@ import { QRCodeModule } from 'angular2-qrcode';
 import { JwtModule } from '@auth0/angular-jwt';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { MovieCommentComponent } from './components/movie-comment/movie-comment.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 export function tokenGetter() {
@@ -62,6 +63,7 @@ export function tokenGetter() {
     MostRankedMoviesComponent,
     MovieLittleCardComponent,
     MovieReviewComponent,
+    MovieCommentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let comment of comments">
+    <p class="text-white">{{ comment.content }}</p>
+    <p class="text-white"><b>Usuario: </b> {{ comment.user.username }}</p>
+  </li>
+</ul>
