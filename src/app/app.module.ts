@@ -36,6 +36,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { MovieCommentComponent } from './components/movie-comment/movie-comment.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NewsPageComponent } from './pages/news-page/news-page.component';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
+import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
 
 export function tokenGetter() {
   return localStorage.getItem('access');
@@ -66,6 +68,8 @@ export function tokenGetter() {
     MovieReviewComponent,
     MovieCommentComponent,
     NewsPageComponent,
+    SearchMovieComponent,
+    CategoriesPageComponent,
   ],
   imports: [
     BrowserModule,
