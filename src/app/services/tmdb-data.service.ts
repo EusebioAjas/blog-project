@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { TMDB_API_URL } from "../config";
 import { MovieReviews } from "../models/movie-reviews";
 import { environment } from "src/environments/environment";
-import { PopularMovies } from '../models/popular-movies';
+import { MovieResponse } from '../models/movies-response';
 import { Movie } from '../models/movie';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,15 @@ export class TMDBDataService {
   constructor(private http:HttpClient) { }
 
   getPopular(){
-    return this.http.get<PopularMovies>(this.moviesUrl).toPromise();
+    return this.http.get<MovieResponse>(this.moviesUrl).toPromise();
+  }
+
+  getTopRated(pageNumber: number): Observable<MovieResponse>{
+    return this.http.get<MovieResponse>(`${TMDB_API_URL}movie/top_rated?api_key=${environment().tmdb_apikey}&language=en-US&page=${pageNumber}`);
+  }
+
+  getUpcoming(pageNumber: number): Observable<MovieResponse>{
+    return this.http.get<MovieResponse>(`${TMDB_API_URL}movie/upcoming?api_key=${environment().tmdb_apikey}&language=en-US&page=${pageNumber}`);
   }
 
   getMovie(id: number){
