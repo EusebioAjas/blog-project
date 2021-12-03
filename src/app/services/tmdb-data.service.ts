@@ -34,4 +34,8 @@ export class TMDBDataService {
   getReviews(id: number){
     return this.http.get<MovieReviews>(`${TMDB_API_URL}movie/${id}/reviews?api_key=${environment().tmdb_apikey}`).toPromise();
   }
+
+  searchMovie(topic: string, pageNumber: number) {
+    return this.http.get<MovieResponse>(`${TMDB_API_URL}search/movie?api_key=${environment().tmdb_apikey}&language=en-US&page=${pageNumber}&include_adult=false&query=${topic}`).toPromise()
+  }
 }
