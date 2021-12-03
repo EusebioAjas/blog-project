@@ -1,9 +1,118 @@
-p {
+/*p {
   display: -webkit-box;
-  text-overflow: Ellipsis; /* will make [...] at the end */
-  overflow: hidden; /* older browsers */
-  text-align: justify;
+  text-overflow: Ellipsis;
+  /* will make [...] at the end */
+/*overflow: hidden;
+  /* older browsers */
+/*text-align: justify;
   -webkit-line-clamp: 4;
   width: 450px;
   -webkit-box-orient: vertical;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+.container-primero {
+  background-color: #0B141F;
+}
+
+hr {
+  background-color: #ffff;
+  position: relative;
+  top: -0.5em;
+}
+
+.container2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  position: relative;
+  padding: 2% 10% 2% 10%;
+}
+
+.container3 {
+  color: #ffff;
+  position: relative;
+  padding: 0em 3% 0% 3%;
+}
+
+.tittle {
+  position: relative;
+}
+
+.container-review {
+  font-size: 13px;
+  text-align: justify;
+  width: 35%;
+}
+
+.container-review2 {
+  height: 133px;
+  margin: 0% 1.5% 0% 1.5%;
+  width: 100%;
+}
+
+section {
+  /*Graceful degradation para Firefox*/
+  overflow: overlay;
+}
+
+/*Webkit(Chrome, Android browser, Safari, Edge...)*/
+section::-webkit-scrollbar {
+  display: none;
+  width: 0%;
+}
+
+section:hover::-webkit-scrollbar {
+  display: initial;
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: #09C;
+}
+
+.text-review {
+  display: -webkit-box;
+  height: 148px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  line-height: 1.3;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.text-review:hover {
+  white-space: initial;
+  -webkit-line-clamp: initial;
+  /*overflow: auto;
+  max-height: 100%;
+  width: calc(100% + 17px) !important;*/
+}
+
+.text-autor {
+  margin-top: 2%;
+  text-align: right;
+}
+
+.vertical {
+  border: none;
+  border-left: 1px solid hsla(200, 10%, 50%, 100);
+  height: 140%;
+  margin: -2% 0% 0% 0%;
+  width: 1px;
+}
+
+.pagination-container {
+  position: relative;
+  margin-top: 5%;
+}
+
+.pagination /deep/ .ngx-pagination .current {
+  background: red;
+}
+
+.text-color-white {
+  color: #ffff;
+  font-weight: bold;
 }
