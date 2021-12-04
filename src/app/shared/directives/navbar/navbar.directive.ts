@@ -24,6 +24,7 @@ export class NavbarDirective {
     if (color) {
       this.renderer.setStyle(this.el.nativeElement, 'color', "red")
       this.renderer.setStyle(this.el.nativeElement, 'text-decoration', "none")
+      this.renderer.setStyle(this.el.nativeElement, 'cursor', 'pointer')
       if(this.isButton == true){
         this.renderer.setStyle(this.el.nativeElement, 'border', "1px solid #FC1342")
       }
