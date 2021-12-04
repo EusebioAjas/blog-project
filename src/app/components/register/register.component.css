@@ -3,8 +3,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-position:center;
-  height: calc(100vh - 8.1em);
+  background-position: center;
+  height: 110vh;
   display: flex;
   align-items: center;
 }
@@ -56,37 +56,17 @@
 }
 
 .olvide:hover {
-  color: white;
+  color: #FC1342;
+  font-weight: bold;
   text-decoration-style: none;
   text-decoration-line: none;
   cursor: pointer;
 }
 
-.olvide1 {
-  color: white;
-  text-decoration-style: none;
-  text-decoration-line: none;
-  font-size: 20px;
-  font-weight: 700 !important;
-  /* border: 2px solid white; */
-  padding: 10px;
-  border-radius: 10px;
-  background: #2D2A2A;
-}
-
-.olvide1:hover {
-  color: white;
-  text-decoration-style: none;
-  text-decoration-line: none;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
-}
-
-/*
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }
 
 small {
   color: red;
-}*/
+}
