@@ -1,21 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap');
 
 .navbar {
-    background-color: #07111B;
+    background-color: #07111B ;
     font-family: 'Mulish', sans-serif;
     font-weight: bold;
+}
+
+.img {
+    margin-right: 2% !important;
 }
 
 .home {
     font-family: 'Mulish', sans-serif;
 }
 
+.boton {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(3%) saturate(0%) hue-rotate(241deg) brightness(103%) contrast(102%);
+}
+
 .buttonLogin {
     border-radius: 25px;
     background-color: transparent;
-}
-
-.modal-login .modal-content{
-    background-color: #2D2A2A;
-    color: #ffffff;
 }

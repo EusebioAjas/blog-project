@@ -1,3 +1,68 @@
+.container-primero {
+  background-image: url(../../../assets/register-login/img-cinema.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+}
+
+.formulario {
+  background: rgba(0, 0, 0, 0.767);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.527);
+  color: white;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.3);
+  border-style: none;
+  color: white;
+  transition: 0.5s ease-in;
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  background: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+.ingresar {
+  background: #FC1342;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700 !important;
+  color: white;
+  transition: 0s ease-in;
+}
+
+.ingresar:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
+}
+
+.olvide {
+  color: white;
+  text-decoration-style: none;
+  text-decoration-line: none;
+}
+
+.olvide:hover {
+  color: #FC1342;
+  font-weight: bold;
+  text-decoration-style: none;
+  text-decoration-line: none;
+  cursor: pointer;
+}
+
 input.ng-invalid.ng-touched {
   border: 1px solid red;
 }

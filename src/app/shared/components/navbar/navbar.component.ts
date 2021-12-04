@@ -10,6 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class NavbarComponent implements OnInit {
 
+  public isCollapsed = true;
+
   constructor(private modal: NgbModal) { }
 
   ngOnInit(): void {

@@ -28,24 +28,36 @@
     background-size: 100% 100%;
 }
 
-.container {
-    align-content: center;
-}
-
 .footer {
     background-color: #07111B;
     font-family: 'Mulish', sans-serif;
     font-weight: bold;
-    height: 4em;
-}
-
-.img-logo {
-    bottom: -10%;
-    position: relative;
-    right: -35%;
+    height: 4rem;
 }
 
 .networks {
-    position: relative;
+    margin-top: 0.7%;
+    position: absolute;
     left: 5%;
+}
+
+img {
+    position: relative;
+    margin-top: 0.4% !important;
+}
+
+@media only screen and (max-width: 430px) {
+    .networks {
+        margin-top: 3.5%;
+        position: absolute;
+        left: 5%;
+    }
+    
+    img {
+        position: relative;
+        margin-top: 3% !important;
+        margin-right: -65% !important;
+        width: 20%;
+        height: 15%;
+    }
 }
