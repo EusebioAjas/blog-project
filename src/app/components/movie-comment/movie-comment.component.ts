@@ -5,12 +5,14 @@ import { CommentService } from 'src/app/services/comment.service';
 @Component({
   selector: 'app-movie-comment',
   templateUrl: './movie-comment.component.html',
-  styleUrls: ['./movie-comment.component.css']
+  styleUrls: ['./movie-comment.component.css'],
 })
 export class MovieCommentComponent implements OnInit {
   @Input() movieId!: number;
   comments!: Comment[];
-  constructor(private commentService: CommentService) { }
+  page = 1;
+  totalItems!: number;
+  constructor(private commentService: CommentService) {}
 
   ngOnInit(): void {
     this.getComments();
@@ -18,11 +20,13 @@ export class MovieCommentComponent implements OnInit {
 
   getComments(): void {
     this.commentService.getComments(this.movieId).then(
-      (response) => ( this.comments = response),
+      (response) => {
+        this.comments = response;
+        this.totalItems = this.comments.length;
+      },
       (error) => {
         alert('Error: ' + error.statusText);
       }
     );
   }
-
 }
