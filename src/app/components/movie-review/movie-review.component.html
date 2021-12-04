@@ -4,8 +4,8 @@
       <p class="tittle"><b>Review</b></p>
     </div>
     <hr>
-    <ul class="review-container">
-      <li class="card border-right border-left" *ngFor="let review of reviews.slice(0, 3)">
+    <ul class="review-container" *ngIf="reviews">
+      <li class="card border-right border-left" *ngFor="let review of reviews | paginate: { itemsPerPage: 2, currentPage: page, totalItems: totalItems }">
         <div class="container-review2">
           <section>
             <p class="text-review text-white">{{ review.content }}</p>
@@ -16,6 +16,6 @@
     </ul>
   </div>
   <div class="d-flex justify-content-center text-color-white">
-    <pagination-controls class="pagination" ></pagination-controls>
+    <pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
   </div>
 </div>
