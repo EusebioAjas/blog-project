@@ -57,7 +57,33 @@ b {
   color: #ffff;
 }
 
+.page-tittle {
+  padding-top: 4% !important;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
 textarea {
+  color: white;
   width: 300px;
   height: 150px;
+  background: #0B141F;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
+  font-size: 20px;
+}
+
+textarea:focus {
+  background-color: #ffff;
+  color: black;
+}
+
+.container-new-comment {
+  background-color: #0b141f;
+}
+
+.container-01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

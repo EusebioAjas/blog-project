@@ -18,6 +18,7 @@ export class MovieDetailComponent implements OnInit {
   comment!: string;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private movieService: TMDBDataService,
     private commentService: CommentService,
     private location: Location
@@ -38,11 +39,14 @@ export class MovieDetailComponent implements OnInit {
   }
 
   create() {
-    this.commentService.createComment({
-      movieId: this.movie?.id + '',
-      title: this.movie?.title,
-      content: this.comment,
-    }).subscribe();
+    this.commentService
+      .createComment({
+        movieId: this.movie?.id + '',
+        title: this.movie?.title,
+        content: this.comment,
+      })
+      .pipe(tap(() => this.router.navigate(['/private/dashboard'])))
+      .subscribe();
   }
 
   goBack(): void {

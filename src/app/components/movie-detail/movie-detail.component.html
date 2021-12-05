@@ -19,12 +19,17 @@
     </div>
     <app-movie-review [movieId]="movie.id"></app-movie-review>
     <app-movie-comment [movieId]="movie.id"></app-movie-comment>
-    <div class="container">
-      <div class="row">
-        <textarea type="text" [(ngModel)]="comment" title="content"></textarea>
-      </div>
-      <div class="row">
-        <button title="create" (click)="create()">add</button>
+    <div class="container-fluid container-new-comment">
+      <div class="container-01">
+        <div>
+          <h1 class="page-tittle text-white p-2">Create a comment</h1>
+          <div class="row justify-content-center">
+            <textarea type="text" [(ngModel)]="comment" title="content"></textarea>
+          </div>
+          <div class="row justify-content-center mt-3">
+            <button class="btn btn-primary" title="create" (click)="create()">add comment</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
