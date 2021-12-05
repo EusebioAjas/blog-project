@@ -17,13 +17,25 @@
     justify-content: center;
     height: 80.8vh;
     overflow: auto;
-    width: 100vw;
+    width: 100%;
     z-index: 20;
 }
 
-@media only screen and (max-width: 494px) {
+@media only screen and (max-width: 307px) {
     .bg-cinema {
-        height: 155vh;
+        height: 245vh;
+    }
+}
+
+@media only screen and (min-width: 307.1px) and (max-width: 515px) {
+    .bg-cinema {
+        height: 230vh;
+    }
+}
+
+@media only screen and (min-width: 515.1px) and (max-width: 1027px) {
+    .bg-cinema {
+        height: 130vh;
     }
 }
 

@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
 
+.background-0 {
+  background-color: #0b141f;
+}
+
 .background {
   background: url("../../../assets/movie-detail/img-cinema.png");
   opacity: 0.9;
-  overflow: hidden;
-  background-repeat: repeat-x;
-  background-color: #0b141f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .wrapper {
