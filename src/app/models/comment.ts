@@ -3,7 +3,7 @@ export interface Comment {
   userId: number;
   movieId: number;
   content: string;
-  user: {
+  user?: {
     id: number;
     username: string;
     email: string;

@@ -19,7 +19,7 @@ export class MovieCommentComponent implements OnInit {
   }
 
   getComments(): void {
-    this.commentService.getComments(this.movieId).then(
+    this.commentService.getComments(this.movieId).subscribe(
       (response) => {
         this.comments = response;
         this.totalItems = this.comments.length;

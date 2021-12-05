@@ -1,0 +1,54 @@
+.contanter-0 {
+    height: calc(100vh - 8.1em);
+}
+
+.container-fluid {
+  align-items: center;
+  background-color: #0b141f;
+  display: flex;
+  margin: 0%;
+  padding: 0% 10% 2% 10% !important;
+  height: 100%;
+}
+
+.page-tittle {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-cards {
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 0% 0% 0% 0% !important;
+  padding: 0px 0% 0% 0% !important;
+}
+
+.card {
+  background-color: #0B141F;
+  font-size: 15px;
+  text-align: center;
+  width: 350px;
+  margin: 2% 2% 2% 2%;
+  padding: 2% 3% 2% 3% !important;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.527);
+}
+
+.container-comment {
+    color: white !important;
+  height: 100%;
+}
+
+.comment {
+  text-align: justify;
+}
+
+.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
+    background-color: #AF7709;
+}
