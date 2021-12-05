@@ -1,7 +1,7 @@
 <div class="container-primero">
   <div class="container2 container-fluid">
     <div class="container3 d-flex justify-content-between">
-      <p class="tittle"><b>Upcoming</b></p>
+      <p class="tittle"><b>UPCOMING</b></p>
     </div>
     <hr>
     <ul class="movies-container">
@@ -13,4 +13,6 @@
     </ul>
   </div>
 </div>
-<pagination-controls class="text-center" (pageChange)="getUpcomingMovies((page = $event))"></pagination-controls>
+<div class="d-flex justify-content-center text-color-white">
+  <pagination-controls class="pagination" (pageChange)="getUpcomingMovies((page = $event))"></pagination-controls>
+</div>
