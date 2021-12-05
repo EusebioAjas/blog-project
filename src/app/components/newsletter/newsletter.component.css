@@ -16,19 +16,19 @@
 }
 
 .card {
+  background-color: #2D2A2A;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.527);
   font-size: 15px;
-  text-align: center;
-  width: 265px;
   margin: 1.5% 1% 1.5% 1% !important;
   padding: 2% 2% 2% 2% !important;
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.527);
-  background-color: #2D2A2A;
+  text-align: center;
+  width: 265px;
 }
 
 .container-img {
-  height: 80% !important;
+  height: 60% !important;
   align-content: center;
   display: flex;
   flex-direction: row;
@@ -43,13 +43,15 @@
 }
 
 .card-title {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 30%;
+  display: flex;
+  font-size: 15px;
+  height: 40%;
+  justify-content: center;
 }
 
 .card-text {
-  height: 50% !important;
+  font-size: 70%;
+  height: 40% !important;
   text-align: justify;
 }
