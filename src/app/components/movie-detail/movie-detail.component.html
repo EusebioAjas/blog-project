@@ -19,6 +19,14 @@
     </div>
     <app-movie-review [movieId]="movie.id"></app-movie-review>
     <app-movie-comment [movieId]="movie.id"></app-movie-comment>
+    <div class="container">
+      <div class="row">
+        <textarea type="text" [(ngModel)]="comment" title="content"></textarea>
+      </div>
+      <div class="row">
+        <button title="create" (click)="create()">add</button>
+      </div>
+    </div>
   </div>
   <qr-code [value]="'https://github.com/EusebioAjas/blog-project'"></qr-code>
 </div>
