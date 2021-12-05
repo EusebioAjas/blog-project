@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
 import { Comment } from 'src/app/models/comment';
@@ -6,6 +6,7 @@ import { CommentService } from 'src/app/services/comment.service';
 
 @Component({
   selector: 'app-dashboard',
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
@@ -13,9 +14,10 @@ export class DashboardComponent implements OnInit {
   comments!: Comment[];
   totalItems!: number;
   comment!: Comment;
+
   constructor(
     private commentService: CommentService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -37,14 +39,5 @@ export class DashboardComponent implements OnInit {
         (response) => this.getComments(),
         (error) => alert(error)
       );
-  }
-
-  update(commentId: number) {
-    this.commentService.udpdateComment(commentId).subscribe(
-      (response) => {
-        alert(response);
-      },
-      (error) => alert(error)
-    );
   }
 }

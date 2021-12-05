@@ -1,0 +1,9 @@
+<div *ngIf="comment" class="container">
+  <p>{{comment.title}}</p>
+  <div class="row">
+    <textarea type="text" [(ngModel)]="comment.content" title="content"></textarea>
+  </div>
+  <div class="row">
+    <button title="update" (click)="update()">Save</button>
+  </div>
+</div>

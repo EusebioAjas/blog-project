@@ -1,8 +1,11 @@
-.contanter-0 {
-    height: calc(100vh - 8.1em);
+.container-0 {
+  background-color: #0b141f;
+  margin: 0%;
+  padding: 0% 5% 2% 5% !important;
+  min-height: calc(100vh - 8.1em);
 }
 
-.container-fluid {
+.container-1 {
   align-items: center;
   background-color: #0b141f;
   display: flex;
@@ -12,9 +15,10 @@
 }
 
 .page-tittle {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 2% 0% 2% 0%;
 }
 
 .container-cards {
@@ -29,7 +33,7 @@
 }
 
 .card {
-  background-color: #0B141F;
+  background-color: #0b141f;
   font-size: 15px;
   text-align: center;
   width: 350px;
@@ -41,7 +45,7 @@
 }
 
 .container-comment {
-    color: white !important;
+  color: white !important;
   height: 100%;
 }
 
@@ -49,6 +53,14 @@
   text-align: justify;
 }
 
-.btn-warning, .btn-warning:hover, .btn-warning:active, .btn-warning:visited {
-    background-color: #AF7709;
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:visited {
+  background-color: #af7709;
+}
+
+textarea {
+  width: 300px;
+  height: 150px;
 }
