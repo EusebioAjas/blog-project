@@ -2,6 +2,54 @@
   --bg: #0b141f;
 }
 
-.bg-page {
-  background-color: var(--bg);
+.container-1 {
+  background-color: #0b141f;
+  margin: 0%;
+  padding: 0% 5% 2% 5% !important;
+  min-height: calc(100vh - 8.1em);
+}
+
+.page-tittle {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  font-size: 15px;
+  text-align: center;
+  width: 300px;
+  margin: 1.5% 1% 1.5% 1% !important;
+  padding: 2% 2% 2% 2% !important;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.527);
+  background-color: #2D2A2A;
+}
+
+.container-img {
+  height: 80% !important;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body {
+  height: 100%;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+}
+
+.card-text {
+  height: 50% !important;
+  text-align: justify;
 }
