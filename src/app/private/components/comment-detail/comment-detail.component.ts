@@ -15,7 +15,7 @@ export class CommentDetailComponent implements OnInit {
   constructor(
     private commentService: CommentService,
     private activedRoute: ActivatedRoute,
-    private route: Router,
+    private route: Router
   ) {}
 
   ngOnInit(): void {
@@ -31,11 +31,15 @@ export class CommentDetailComponent implements OnInit {
 
   update() {
     const id = Number(this.activedRoute.snapshot.paramMap.get('id'));
-    this.commentService.udpdateComment(id, this.comment.content)
-    .pipe(
-      tap(() => this.route.navigate(['private/dashboard']))
-    ).subscribe((response) => {
-      alert(response);
-    });
+    this.commentService
+      .udpdateComment(id, this.comment.content)
+      .pipe(tap(() => this.route.navigate(['private/dashboard'])))
+      .subscribe((response) => {
+        alert(response);
+      });
+  }
+
+  goBack() {
+    this.route.navigate(['private/dashboard']);
   }
 }
