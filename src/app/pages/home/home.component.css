@@ -23,19 +23,19 @@
 
 @media only screen and (max-width: 307px) {
     .bg-cinema {
-        height: 165vh;
+        height: 245vh;
     }
 }
 
 @media only screen and (min-width: 307.1px) and (max-width: 515px) {
     .bg-cinema {
-        height: 155vh;
+        height: 230vh;
     }
 }
 
 @media only screen and (min-width: 515.1px) and (max-width: 1027px) {
     .bg-cinema {
-        height: 90vh;
+        height: 130vh;
     }
 }
 
