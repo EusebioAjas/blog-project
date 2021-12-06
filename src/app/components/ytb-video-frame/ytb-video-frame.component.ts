@@ -12,6 +12,7 @@ export class YtbVideoFrameComponent implements OnInit {
   videos!: Video[];
   @Input() queryYtb!: string;
   safeURL!: SafeResourceUrl;
+  @Output() ytbUrl!: string;
 
   constructor(
     private ytbService: YouTubeVideoService,
@@ -27,14 +28,14 @@ export class YtbVideoFrameComponent implements OnInit {
       (response) =>
         response.items.map((video) => this.getVideo(video.id.videoId)),
       (error) => {
-        alert(error.statusText);
+        console.log(error.statusText);
       }
     );
   }
 
   getVideo(videoId: string) {
-    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(
-      YOUTUBE_BASE_URL + videoId
-    );
+    const fullURL = YOUTUBE_BASE_URL + videoId;
+    this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(fullURL);
+    this.ytbUrl = fullURL;
   }
 }
