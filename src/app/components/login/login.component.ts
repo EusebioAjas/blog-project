@@ -26,12 +26,18 @@ export class LoginComponent {
 
   login(): void {
     if (this.loginForm.valid) {
-      this.authService.userLogin({
-        email: this.email.value,
-        password: this.password.value,
-      }).pipe(
-        tap(() => this.route.navigate(['../../private/dashbord']))
-      ).subscribe();
+      this.authService
+        .userLogin({
+          email: this.email.value,
+          password: this.password.value,
+        })
+        .subscribe((res) => {
+          if (res.role === 'admin') {
+            this.route.navigate(['../../private/adminpanel']);
+          } else {
+            this.route.navigate(['../../private/dashboard']);
+          }
+        });
     }
   }
 
