@@ -25,7 +25,7 @@ export class CommentService {
   destroyUserComments(commentId: number): Observable<string> {
     return this.httpClient
       .delete<string>(`${API_BASE_URL}/users/comments/${commentId}`)
-      .pipe(tap((_) => alert('Deleted comment id=' + commentId)));
+      .pipe(tap((_) => console.log('Deleted comment id=' + commentId)));
   }
 
   udpdateComment(commentId: number, content: string): Observable<string> {
@@ -34,7 +34,7 @@ export class CommentService {
       .put<string>(`${API_BASE_URL}/users/comments/${commentId}`, {
         content: content,
       })
-      .pipe(tap((_) => alert('Updated comment id=' + commentId + content)));
+      .pipe(tap((_) => console.log('Updated comment id=' + commentId)));
   }
 
   getComment(commentId: number): Observable<Comment> {
@@ -54,6 +54,6 @@ export class CommentService {
         title,
         content,
       })
-      .pipe(tap(() => alert('comment created')));
+      .pipe(tap(() => console.log('comment created')));
   }
 }
