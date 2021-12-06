@@ -39,7 +39,7 @@ import { NewsPageComponent } from './pages/news-page/news-page.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
 
-export function tokenGetter() {
+export function tokenGetter(): any {
   return localStorage.getItem('access');
 }
 @NgModule({
