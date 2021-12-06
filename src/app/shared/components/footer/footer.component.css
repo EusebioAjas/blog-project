@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap');
+
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+.btn-facebook {
+    background: url('../../../../assets/footer/img-facebook.png') center;
+    background-size: 100% 100%;
+}
+
+.btn-twitter {
+    background: url('../../../../assets/footer/img-twitter.png') center;
+    background-size: 100% 100%;
+}
+
+.btn-youtube {
+    background: url('../../../../assets/footer/img-youtube.png') center;
+    background-size: 100% 100%;
+}
+
+.btn-instagram {
+    background: url('../../../../assets/footer/img-instagram.png') center;
+    background-size: 100% 100%;
+}
+
+.footer {
+    background-color: #07111B;
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    height: 4rem;
+}
+
+.networks {
+    margin-top: 0.7%;
+    position: absolute;
+    left: 5%;
+}
+
+img {
+    position: relative;
+    margin-top: 0.4% !important;
+}
+
+@media only screen and (max-width: 430px) {
+    .networks {
+        margin-top: 3.5%;
+        position: absolute;
+        left: 5%;
+    }
+    
+    img {
+        position: relative;
+        margin-top: 3% !important;
+        margin-right: -65% !important;
+        width: 20%;
+        height: 15%;
+    }
+}

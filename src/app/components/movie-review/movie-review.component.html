@@ -1,0 +1,21 @@
+<div class="container-primero">
+  <div class="container2 container-fluid">
+    <div class="container3 d-flex justify-content-between">
+      <p class="tittle"><b>Reviews</b></p>
+    </div>
+    <hr>
+    <ul class="review-container" *ngIf="reviews">
+      <li class="card border-right border-left" *ngFor="let review of reviews | paginate: { itemsPerPage: 2, currentPage: page, totalItems: totalItems }">
+        <div class="container-review2">
+          <section>
+            <p class="text-review text-white">{{ review.content }}</p>
+          </section>
+          <p class="text-autor text-white"><b>Autor:  {{ review.author }}</b></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="d-flex justify-content-center text-color-white">
+    <pagination-controls class="pagination" (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>

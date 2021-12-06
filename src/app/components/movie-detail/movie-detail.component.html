@@ -1,0 +1,36 @@
+<div class="background-0">
+  <div class="background" *ngIf="movie">
+    <div class="wrapper">
+      <div class="item">
+        <img [src]="movie.poster_path | appendBaseImgUrl" class="movie-img" alt="..." />
+      </div>
+      <div class="item movie-overview">
+        <h2 class="text-left">
+          <b>{{ movie.title | uppercase }}</b>
+        </h2>
+        <h3>{{ movie.runtime | dateRuntime }}</h3>
+        <div>
+          <p>{{ movie.overview }}</p>
+        </div>
+      </div>
+      <div class="item">
+        <app-ytb-video-frame [queryYtb]="movie.title"></app-ytb-video-frame>
+      </div>
+    </div>
+    <app-movie-review [movieId]="movie.id"></app-movie-review>
+    <app-movie-comment [movieId]="movie.id"></app-movie-comment>
+    <div class="container-fluid container-new-comment">
+      <div class="container-01">
+        <div>
+          <h1 class="page-tittle text-white p-2">Create a comment</h1>
+          <div class="row justify-content-center">
+            <textarea type="text" [(ngModel)]="comment" title="content"></textarea>
+          </div>
+          <div class="row justify-content-center mt-3">
+            <button class="btn btn-primary" title="create" (click)="create()">add comment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

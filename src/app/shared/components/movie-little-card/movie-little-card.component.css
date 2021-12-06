@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;600;700&display=swap');
+
+.card {
+    height: 240px;
+    width: 160px;
+}
+
+.container1 {
+    bottom: -4.5em;
+    left: 0.3em;
+    margin: 0em;
+    position: relative;
+    text-align: center;
+}
+
+.card-img-overlay {
+    background: linear-gradient(to bottom, rgba(42, 20, 115, 1), rgba(25, 18, 73, 0.38), rgba(7, 16, 26, 1));
+    height: 100%;
+    opacity: 0.8;
+    width: 100%;
+}
+
+.into {
+    margin: auto;
+}
+
+.cardtext {
+    bottom: 5em;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    left: 1em;
+    right: 1em;
+    position: absolute;
+    text-align: center;
+}
+
+.stars-container {
+    height: 50px;
+    overflow: hidden;
+    width: 100px;
+}
+
+.stars-container > .img-stars {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.release_day {
+    position: relative;
+    bottom: -12.5em;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 10px;
+    margin: 10px 20% 0% 20%;
+    text-align: center;
+}
+
+
+.card-section:hover {
+    box-shadow: 1px 1px 20px #d2d2d2;
+}

@@ -1,0 +1,22 @@
+<div class="container-primero">
+  <div class="container2 container-fluid">
+    <div class="container3 d-flex justify-content-between">
+      <p class="tittle"><b>Comments</b></p>
+    </div>
+    <hr>
+    <ul class="review-container" *ngIf="comments">
+      <li class="card border-right border-left" *ngFor="let comment of comments | paginate: { itemsPerPage: 2, currentPage: page, totalItems: totalItems, id: 'comment'}">
+        <div class="container-review2">
+          <section>
+            <p class="text-review text-white">{{ comment.content }}</p>
+          </section>
+          <p class="text-autor text-white"><b>User:  {{ comment.user?.username }}</b></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="d-flex justify-content-center text-color-white">
+    <pagination-controls class="pagination" (pageChange)="page = $event" id="comment"></pagination-controls>
+  </div>
+</div>
+

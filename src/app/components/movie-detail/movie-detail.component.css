@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+.background-0 {
+  background-color: #0b141f;
+}
+
+.background {
+  background: url("../../../assets/movie-detail/img-cinema.png");
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.item {
+  align-self: center;
+  margin: 1em;
+}
+
+.movie-img {
+  height: 540px;
+  object-fit: contain;
+  object-position: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.movie-overview {
+  background-color: #0b141f;
+  margin: 0 1em 0 1em;
+  opacity: 0.7;
+  padding: 3%;
+  text-align: justify;
+  width: 450px;
+}
+
+.movie-overview,
+.img-background {
+  border-radius: 2%;
+}
+
+h2,
+h3,
+p,
+b {
+  font-family: "Mulish", sans-serif;
+  color: #ffff;
+}
+
+.page-tittle {
+  padding-top: 4% !important;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+textarea {
+  color: white;
+  width: 300px;
+  height: 150px;
+  background: #0B141F;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
+  font-size: 20px;
+}
+
+textarea:focus {
+  background-color: #ffff;
+  color: black;
+}
+
+.container-new-comment {
+  background-color: #0b141f;
+}
+
+.container-01 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

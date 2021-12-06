@@ -1,0 +1,49 @@
+<div class="container-primero container-fluid">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-8 col-xl-4 col-lg-5 align-middle formulario">
+        <form [formGroup]="registerForm" (ngSubmit)="register()" action="">
+          <div class="form-group text-center pt-3">
+            <h1 class="text-light">Create a New Account</h1>
+          </div>
+          <div class="form-group mx-sm-4 pt-3">
+            <label for="username">User name</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="name" id="username" />
+            <small *ngIf="username.touched && username.hasError('required')">Username is required</small>
+          </div>
+          <div class="form-group mx-sm-4 pt-3">
+            <label for="emailAddress">Email address</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="name@example.com"
+              id="emailAddress" />
+            <small *ngIf="email.touched && email.hasError('required')">Email is required</small>
+            <small *ngIf="email.touched && email.hasError('email')">Email must be valid</small>
+          </div>
+          <div class="form-group mx-sm-4 pb-3">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Your password" formControlName="password" class="form-control"
+              id="password" />
+            <small *ngIf="password.touched && password.hasError('required')">Password is required</small>
+            <small *ngIf="password.touched && password.hasError('pattern')">Must be a valid password</small>
+          </div>
+          <div class="form-group mx-sm-4 pb-3">
+            <label for="confirmPassword">Confirm password</label>
+            <input type="password" placeholder="Repeat your password" formControlName="confirmPassword"
+              class="form-control" id="confirmPassword" />
+            <small *ngIf="confirmPassword.touched && registerForm.hasError('passwordsNotMatching')">Password
+              confirmation not
+              matching</small>
+          </div>
+          <div class="form-group mx-sm-4 pb-2">
+            <button type="submit" [disabled]="!registerForm.valid" class="btn btn-block ingresar">
+              Sign Up
+            </button>
+          </div>
+          <div class="form-group mx-sm-4 text-right">
+            Already have an account?
+            <span class=""><a routerLink="/login" class="olvide">Sign In</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

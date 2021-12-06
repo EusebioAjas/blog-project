@@ -1,0 +1,57 @@
+:root {
+  --bg: #0b141f;
+}
+
+.container-1 {
+  background-color: #0b141f;
+  margin: 0%;
+  padding: 0% 5% 2% 5% !important;
+  min-height: calc(100vh - 8.1em);
+}
+
+.page-tittle {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card {
+  background-color: #2D2A2A;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.527);
+  font-size: 15px;
+  margin: 1.5% 1% 1.5% 1% !important;
+  padding: 2% 2% 2% 2% !important;
+  position: relative;
+  text-align: center;
+  width: 265px;
+}
+
+.container-img {
+  height: 60% !important;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body {
+  height: 100%;
+}
+
+.card-title {
+  align-items: center;
+  display: flex;
+  font-size: 15px;
+  height: 40%;
+  justify-content: center;
+}
+
+.card-text {
+  font-size: 70%;
+  height: 40% !important;
+  text-align: justify;
+}

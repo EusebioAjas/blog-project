@@ -1,0 +1,15 @@
+.movies-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card {
+  height: 270px;
+  margin: 2em;
+  width: 180px;
+}

@@ -1,0 +1,20 @@
+<div class="card card-section" href="#">
+  <img [src]="movie.poster_path | appendBaseImgUrl" class="card-img" alt="..." />
+  <div class="card-img-overlay">
+    <div class="into">
+      <p class="cardtext">
+        <span>{{ movie.title }}</span>
+      </p>
+    </div>
+    <div>
+      <div class="container1">
+        <div class="stars-container">
+          <ngbd-rating-basic
+            [currentRate]="movie.vote_average | rating"
+          ></ngbd-rating-basic>
+        </div>
+      </div>
+      <p class="release_day text-white">{{ movie.release_date }}</p>
+    </div>
+  </div>
+</div>
