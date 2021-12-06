@@ -42,11 +42,9 @@ export class AuthenticationService {
     );
   }
 
-  deleteUser(email: string): Observable<string>{
-    alert(email)
-    return this.httpClient.delete<string>(`${API_BASE_URL}/admin/users/${email}`).
-    pipe(
-      tap(()=> alert('User deleted'))
-    );
+  deleteUser(email: string): Observable<string> {
+    return this.httpClient
+      .delete<string>(`${API_BASE_URL}/admin/users/${email}`)
+      .pipe(tap(() => console.log('User deleted')));
   }
 }
