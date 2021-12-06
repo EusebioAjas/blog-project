@@ -5,6 +5,7 @@ import { API_BASE_URL } from '../config/api';
 import { User } from '../models/user';
 import { catchError, tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { LoginResponse } from '../models/login-response';
 
 @Injectable({
   providedIn: 'root',
@@ -26,11 +27,18 @@ export class AuthenticationService {
     );
   }
 
-  userLogin(user: User): Observable<string> {
-    return this.httpClient.post<string>(`${API_BASE_URL}/signIn`, user).pipe(
-      tap((res: string) => localStorage.setItem('access', res)),
-      tap(() => alert('Login successfull'))
-    );
+  userLogin(user: User): Observable<LoginResponse> {
+    return this.httpClient
+      .post<LoginResponse>(`${API_BASE_URL}/signIn`, user)
+      .pipe(
+        tap((res: LoginResponse) => localStorage.setItem('access', res.token)),
+        tap((res) => localStorage.setItem('role', res.role)),
+      );
+  }
+
+  logOut(): void {
+    localStorage.removeItem('access');
+    localStorage.removeItem('role');
   }
 
   getUsers(): Observable<User[]> {
